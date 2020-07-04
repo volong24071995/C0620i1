@@ -1,0 +1,20 @@
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+div{
+    margin-top: 20px;
+}
+.tableS{
+    text-align:center;
+}
+.tab1{
+    text-align: left;
+}
+select{
+    height: auto;
+    width: 450px;
+}
+body{
+    margin-left: 50px;
+}
