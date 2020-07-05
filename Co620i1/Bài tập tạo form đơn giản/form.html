@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tao form cơ bản</title>
+    
+</head>
+<body>
+    <div style="height: auto; width: 350px; border:1px solid orangered;">
+    <form action="sever.html" method="get" >
+    <table >
+        <tr >
+            <td style="text-align: center; background-color: orangered;width: 350px;" colspan="2">SỞ THÍCH CỦA TÔI</td>
+        </tr>
+        <tr>
+            <td style="text-align: right; color:royalblue;">Họ và tên</td>
+            <td><input type="text" name="Họ và tên" size="25"/></td>
+        </tr>
+        <tr>
+            <td style="text-align: right;color:royalblue">Email</td>
+            <td><input type="email" name="email" value=""/></td>
+        </tr>
+        <tr>
+            <td style="text-align: right;color:royalblue">Sở thích</td>
+            <td>
+                <table style="color: orangered;">
+                    <tr>
+                        <td><input type="checkbox" name="hobby">Thể thao</td>
+                        <td><input type="checkbox" name="hobby">Âm nhạc</td>
+                        <td><input type="checkbox" name="hobby">Đọc sách</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="hobby">Lướt web</td>
+                        <td><input type="checkbox" name="hobby">Chơi game</td>
+                        <td><input type="checkbox" name="hobby"name>Điện ảnh</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox">Du lịch</td>
+                    </tr>               
+                </table>
+        </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" name="gửi thông tin" value="gửi thông tin">
+                <input type="reset" name="nhập lai" value="nhập lại">
+            </td>
+        </tr>
+    </table>
+    </form>
+    </div>
+</body>
+</html>

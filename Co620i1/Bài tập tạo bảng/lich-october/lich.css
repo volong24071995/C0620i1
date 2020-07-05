@@ -1,0 +1,52 @@
+table{
+    border:1px none;
+    border-collapse: collapse;
+    width: 600px;;
+    height: 400px;
+    text-align: center;
+}
+th{
+    border:2px solid white;
+    color: white;
+    background-color: yellow;
+}
+td{
+    border:2px solid gray;
+}
+.an,.an td{
+    border: none;
+    
+}
+.sun{
+    color: red;
+}
+.container .sun{
+    color: white;
+    background-color: red;
+}
+.sun sub{
+    color: black;
+}
+.sat{
+    color: royalblue;
+    
+}
+.sat sub{
+    color:black;
+}
+sub{
+    font-size: 10px;
+}
+.container .sat{
+    color: white;
+    background-color: royalblue;
+}
+.center{
+    display: inline-block;
+}
+h1{
+    text-align: center;
+}
+div{
+    text-align: center;
+}

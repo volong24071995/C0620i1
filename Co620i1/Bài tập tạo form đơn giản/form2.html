@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form2</title>
+    <link rel="stylesheet" href="css1.css"/>
+</head>
+<body>
+    <div style="height: auto; width: 350px; border:1px solid orangered;" >
+    <form action="sever.html" method="GET">
+    <table style="text-align: left;">
+        <tr>
+            <td colspan="2" style="text-align: center;background-color: skyblue; width: 350px;;" >ĐĂNG KÝ HỌC VIÊN</td>
+        </tr>
+        <tr>
+            <td class="col1">Họ và tên</td>
+            <td>
+                <input type="text" size="30"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="col1">Ngày sinh</td>
+            <td>
+                <input type="text"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="col1">Giới tính</td>
+            <td>
+                <input type="radio" name="giới tính"/>Nam
+                <input type="radio" name="giới tính"/>Nữ
+            </td>
+        </tr>
+        <tr>
+            <td><div style="margin-top:-42px;" class="col1">Địa chỉ</div></td>
+            <td>
+                <textarea cols="25" rows="5"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td class="col1">Lớp</td>
+            <td>
+                <select>
+                    <option>-chọn lớp-</option>
+                    <option>lớp A</option>
+                    <option>lớp B</option>
+                    <option>lớp C</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="col1">Email</td>
+            <td>
+                <input type="email" name="email" />
+            </td>
+        </tr>
+        <tr>
+            <td class="col1">Điện thoại</td>
+            <td>
+                <input type="text"/>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" name="submit" value="Đăng ký"/>
+                <input type="reset" name="reset" value="Nhập lại">
+            </td>
+        </tr>
+    </table>
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.lan1{
+    font-weight:bold;
+    font-size: 20px;
+    margin-top: 16px;
+}
+input{
+    margin-top: 4px
+}
+text{
+    font-size: 20px;
+}
+.tong{
+    border: 1px solid teal ;
+    height: auto;
+    width:177px ;
+}
