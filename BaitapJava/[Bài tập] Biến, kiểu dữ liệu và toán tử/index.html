@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Nhap tat ca cac thong so
+        var phyciscal, chemistry,biology,degreeC,r;
+        //nhap thong so diem
+        phyciscal=Number (prompt('Nhap diem phyciscal:'));
+        chemistry=Number (prompt('Nhap diem chemistry:'));
+        biology=Number (prompt('Nhap diem biology:'));
+        //nhap thong so nhiet do 
+        degreeC=Number (prompt('Nhap nhiet do: ',));
+        //nhap thong so ban kinh 
+        r=Number (prompt('Nhap ban kinh hinh tron:'));
+        //tinh toan ca thong so
+        average=(phyciscal+chemistry+biology)/3;
+        degreeF=(degreeC*9)/5+32;
+        P=2*r*3.14;
+        S=(P/2)*r;
+        document.write("Chu vi hinh tron ",+P)
+        document.write('<br>')
+        document.write("Dien tich hinh tron ",+S)
+        document.write('<br>')
+        document.write('Diem trung binh ',+average)
+        document.write('<br>')
+        document.write('Doi nhiet do ',+degreeF)
+
+    </script>
+</body>
+</html>

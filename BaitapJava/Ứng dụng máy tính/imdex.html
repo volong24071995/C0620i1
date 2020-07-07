@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculator</title>
+</head>
+<body>
+    <h1>caculator</h1>
+    <form action="">
+        <input type="number" id="element1">
+        <input type="number" id="element2">
+        <button type="button" onclick="addition()">Addition(+)</button>
+        <button type="button" onclick="subtraction()">Subtraction(-)</button>
+        <button type="button" onclick="mutiplication()">Mutiplication(*)</button>
+        <button type="button" onclick="division()">Division(/)</button>
+    </form>
+    <span id="output"></span>
+    <script>
+        
+        function addition(){
+            let a =Number( document.getElementById('element1').value);
+            let b =Number (document.getElementById('element2').value);
+            let tich=0;
+            tich=a+b;
+            document.getElementById('output').innerHTML =(tich);
+        }
+        function subtraction(){
+            let a =Number( document.getElementById('element1').value);
+            let b =Number (document.getElementById('element2').value);
+            let tich=0;
+            tich=a-b;
+            document.getElementById('output').innerHTML =(tich);
+        }
+        function mutiplication(){
+            let a =Number( document.getElementById('element1').value);
+            let b =Number (document.getElementById('element2').value);
+            let tich=0;
+            tich=a*b;
+            document.getElementById('output').innerHTML =(tich);
+        }
+        function division(){
+            let a =Number( document.getElementById('element1').value);
+            let b =Number (document.getElementById('element2').value);
+            let tich=0;
+            tich=a/b;
+            document.getElementById('output').innerHTML =(tich);
+        }
+    </script>
+</body>
+</html>

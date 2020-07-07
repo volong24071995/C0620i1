@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyene tien VND sang USD va nguoc lai</title>
+</head>
+
+<body>
+
+    <form action="">
+        <div id="chuyentien">
+            <input type="number" id="moneyinput" value="">
+            <select name="From" id="moneyhave">
+                <option value="VietNam">VietNam</option>
+                <option value="USD">USD</optipon>
+            </select>
+            <select name="To" id="moneywillhave">
+                <option value="VietNam">VietNam</option>
+                <option value="USD">USD</optipon>
+            </select>
+        </div>
+        <button type="button" onclick="chuyentien1();">Convert</button>
+
+    </form>
+    <span id="result"></span>
+</body>
+<script>
+    function chuyentien1() {
+        let tien = document.getElementById('moneyinput').value;
+        let nuoc1 = document.getElementById('moneyhave').value;
+        let nuoc2 = document.getElementById('moneywillhave').value;
+
+        if ((nuoc1 === "VietNam") && (nuoc2 === "VietNam")) {
+            tienra = tien;
+        }
+        else if ((nuoc1 === "VietNam") && (nuoc2 === "USD")) {
+            tienra = tien / 23000;
+        }
+        else if ((nuoc1 === "USD") && (nuoc2 === "VietNam")) {
+            tienra = tien * 23000;
+        }
+        else if ((nuoc1 === "USD") && (nuoc2 === "USD")) {
+            tienra = tien;
+
+        };
+        document.getElementById('result').innerHTML = ` ${tienra}`;
+
+    }
+
+
+
+</script>
+
+</html>
