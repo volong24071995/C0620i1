@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 10</title>
+</head>
+<body>
+    <!--  Viết chương trình tính giá điện. -->
+    <script>
+        let kwh=parseInt(prompt('Nhập số điện nhà dùng'));
+        let monney;
+        if (kwh>0){
+            if (kwh>400){
+                monney=(kwh-400)*2937+100*(2536+2014+2834)+50*(1734+1678);
+            }
+            else{
+                if (kwh>300){
+                    monney=(kwh-300)*2834+100*(2536+2014)+50*(1734+1678);
+                }
+                else {
+                    if (kwh>200){
+                        monney=(kwh-200)*2536+100*2014+50*(1734+1678);  
+                    }
+                    else{
+                        if (kwh>100){
+                            monney=(kwh-100)*2014+50*(1734+1678);
+                        }
+                        else{
+                            if (kwh>50){
+                                monney=(kwh-50)*1734+50*1678;
+                            }
+                            else monney=kwh*1678;
+
+                        }
+                    }
+                }
+            }
+            document.write('Số tiền trả là: '+monney);
+        }
+        else{
+            document.write('Nhập cho đúng ăn gian công an bắt chết :)');
+        }
+        
+    </script>
+</body>
+</html>

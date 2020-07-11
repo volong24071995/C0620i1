@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai7</title>
+</head>
+
+<body>
+    <!-- Giải phương trình bậc 2. -->
+    <script>
+        let a = +(prompt('Nhập a'));
+        let b = +(prompt('Nhập b'));
+        let c = +(prompt('Nhập c'));
+        let deta = ((b ** 2) - (4 * a*c));
+        let x, x1, x2;
+        if (a == 0) {
+            if (b == 0) {
+                if (c == 0) {
+                    document.write('Phương trình luôn đúng');
+                }
+                else {
+                    document.write('Phương trình vô nghiệm');
+                }
+            }
+            else {
+                x = -c / b;
+                document.write('Phương trình có 1 nghiệm là' + x);
+            }
+        }
+        else {
+            if (deta > 0) {
+                x1 =(-b + Math.sqrt(deta)) / (2 * a);
+                x2 = (b + Math.sqrt(deta)) / (2 * a);
+                document.write('Phương trình có hai nghiệm x1: ' + x1, 'và x2: ' + x2);
+            }
+            else {
+                if (deta = 0) {
+                    document.write('Phương trình có nghiệm kép là: ' +x)
+                }
+                else document.write('Phương trình vô nghiệm');
+            }
+        }
+
+    </script>
+</body>
+
+</html>

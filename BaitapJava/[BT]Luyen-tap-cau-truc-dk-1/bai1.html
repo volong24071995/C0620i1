@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+
+<body>
+    <!-- Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không -->
+    <script>
+        let a, b;
+        a = parseInt(prompt('Nhập số nguyên a:'));
+        b = parseInt(prompt('Nhập số nguyên b:'));
+        if (typeof a ==="number"&&typeof b ==="number"){
+            if (a % b == 0) {
+            document.write("a chia het cho b");
+            }
+            else
+            document.write("a không chia het cho b");
+
+        }
+        else document.write('Đây không phải là số')
+         
+    </script>
+</body>
+
+</html>

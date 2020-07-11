@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai11</title>
+</head>
+<body>
+    <!--  Viết chương trình tính thuế thu nhập cá nhân. -->
+    <script>
+        let monney=+(prompt('Nhập số tiền bạn kiếm được trong tháng qua (triệu đồng)'));
+        let thue;
+        if (monney>0){
+            if(monney>80){
+                thue=monney*35/100;
+            }
+            else{
+                if (monney>52){
+                    thue=monney*30/100;
+                }
+                else{
+                    if (monney>32){
+                        thue=monney*25/100;
+                    }
+                    else{
+                        if (monney>18){
+                            thue=monney*20/100;
+                        }
+                        else{
+                            if (monney>10){
+                                thue=monney*15/100;
+                            }
+                            else{
+                                if (monney>5){
+                                    thue=monney*10/100;
+                                }
+                                else  thue=monney*5/100;
+                            }
+                        }   
+                    }
+                }
+            }
+            document.write('Thuế phải nộp là: '+thue,"triệu đồng");
+        }
+        else{
+            document.write('Khai báo thuế là nghĩa vụ của công dân.Khai báo sai gây thất thoát thuế nhà nước có thể bị phạt tù :D')
+        }
+    </script>
+</html>

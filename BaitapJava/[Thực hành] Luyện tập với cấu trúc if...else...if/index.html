@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] Luyện tập với cấu trúc if...else...if</title>
+</head>
+
+<body>
+    <script>
+        var value = prompt('Nhap ten nguoi dung:');
+        if (value == "Admin") {
+            var password = prompt('Nhap mat khau:')
+            while ((password != "TheMaster")&&(password != "")){
+                password=prompt('Wrong password.Nhap lai password:');
+            }
+            if ((password == "TheMaster")){
+                document.write('Wellcome')
+            }
+            else{
+                if ((password =="")){
+                    document.write('Canceld')
+                }
+            }
+               
+        }
+        else{
+            if (value==""){
+                document.write('canceld');
+            }
+            else document.write('I don’t know you');
+        }
+    
+
+    </script>
+</body>
+
+</html>

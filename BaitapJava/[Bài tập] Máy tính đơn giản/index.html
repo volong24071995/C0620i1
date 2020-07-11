@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Máy tính đơn giản</title>
+</head>
+<body>
+    <form action="">
+        <div style="display: inline-block; text-align: center; border: 2px solid black;">
+        <small>máy tính bỏ túi</small>
+        <br>
+        <input type="text" style="height:30px ;width: 250px;text-align: right; " id="hienthi" disabled ><br>
+        <br>
+        <input type="button" style="height: 50px; width: 50px;" value="1" onclick="one()"/>
+        <input type="button" style="height: 50px; width: 50px;" value="2" onclick="two()"/>
+        <input type="button" style="height: 50px; width: 50px;" value="3" onclick="three()"/>
+        <input type="button" style="height: 50px; width: 50px;" value="+" onclick="sum()"/><br>       
+        <input type="button" style="height: 50px; width: 50px;" value="4" onclick="four()"/>
+        <input type="button" style="height: 50px; width: 50px;" value="5" onclick="five()"/>
+        <input type="button" style="height: 50px; width: 50px;" value="6" onclick="six()"/>
+        <input type="button" style="height: 50px; width: 50px;" value="-" onclick="oppositesum()"/><br>        
+        <input type="button" style="height: 50px; width: 50px;" value="7" onclick="seven()" />
+        <input type="button" style="height: 50px; width: 50px;" value="8" onclick="eight()"/>
+        <input type="button" style="height: 50px; width: 50px;" value="9" onclick="nine()"/>
+        <input type="button" style="height: 50px; width: 50px;" value="x" onclick="multiply()"/><br>
+        <input type="button" style="height: 50px; width: 50px;" value="C" onclick="deletes()"/>
+        <input type="button" style="height: 50px; width: 50px;" value="0" onclick="zero()"/>
+        <input type="button" style="height: 50px; width: 50px;" value="=" onclick="equal()"/>
+        <input type="button" style="height: 50px; width: 50px;" value="/" onclick="share()"/><br>
+    </div>
+    <script>
+        function deletes(){
+            xoa=document.getElementById('hienthi').value="";
+        }
+        function one(){
+            number1=document.getElementById('hienthi').value+=1
+        }
+        function two(){
+            number2=document.getElementById('hienthi').value+=2
+        }
+        function three(){
+            number3=document.getElementById('hienthi').value+=3
+        }
+        function four(){
+            number4=document.getElementById('hienthi').value+=4
+        }
+        function five(){
+            number5=document.getElementById('hienthi').value+=5
+        }
+        function six(){
+            number6=document.getElementById('hienthi').value+=6
+        }
+        function seven(){
+            number7=document.getElementById('hienthi').value+=7
+        }
+        function eight(){
+            number8=document.getElementById('hienthi').value+=8
+        }
+        function nine(){
+            number9=document.getElementById('hienthi').value+=9
+        }
+        function zero(){
+            number0=document.getElementById('hienthi').value+=0
+        }
+        function sum(){
+            cong=document.getElementById('hienthi').value+="+"
+        }
+        function oppositesum(){
+            tru=document.getElementById('hienthi').value+="-"
+        }
+        function multiply(){
+            nhan=document.getElementById('hienthi').value+="*"
+        }
+        function share(){
+            chia=document.getElementById('hienthi').value+="/"
+        }
+        function equal(){
+            bang=document.getElementById("hienthi").value;
+            x=eval(bang);
+            document.getElementById("hienthi").value=x
+        }
+    </script>
+    </form>
+    
+</body>
+</html>

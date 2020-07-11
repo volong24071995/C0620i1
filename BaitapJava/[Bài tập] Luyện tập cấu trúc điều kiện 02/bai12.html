@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 12</title>
+</head>
+<body>
+    <!--  Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng. -->
+    <script>
+        // lai theo ngan hang viettin 0.69% thang
+        let monney=+(prompt('Nhập sô tiền vay từ ngân hang Viettinbank (triệu)'));
+        let month=+(prompt('Nhập số thang vay'));
+        let remember=monney;
+        let s;
+        let i;
+        let lai;
+        for (i=1;i<=month;i++){
+            monney=(monney+monney*0.0068);
+        }
+        lai=parseInt((monney-remember)*1000000);
+        s=lai+remember*1000000;
+        document.write("Số tiền lãi phải trả cho ngân hàng là: "+lai,'(đồng)<br>');
+        document.write("Số tiền phải trả cho ngân hàng là: "+s,'đồng');
+    </script>
+</body>
+</html>

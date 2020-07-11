@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7</title>
+</head>
+<body>
+    <!-- Giá tiền gọi di động 1 phút (dùng card gọi nội vùng): 3.300 đồng
+=> 30 giây: 1.650 đồng.  1s=55dong-->
+        <script>
+            let p=3300;
+            let s=55;
+            let minute,second,monney;
+            minute=+(prompt('Nhập số phút'));
+            monney=minute*3300;
+            // Tao lao-vui:
+            // second=(minute*60)%60;
+            // minute=parseInt(minute);
+            // monney=minute*p+s*second;
+             document.write('Số tiền cước phải tra là '+ monney);
+        </script>
+</body>
+</html>

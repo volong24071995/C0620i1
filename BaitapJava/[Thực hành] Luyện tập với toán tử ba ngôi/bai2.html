@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai2</title>
+</head>
+<body>
+    <script>
+        var value;
+        value=prompt('nhap chuoi');
+        /*console.log('a'+value+'a');
+        if(value=="Employee"){
+            document.write('Hello');
+        }
+            else if(value=="Director"){
+                document.write("Greetings");
+            }
+            else if(value==''){
+            document.write("No login");
+            }
+            else document.write('.....');
+        */
+        switch(value){
+            case "Employee":
+            document.write('Hello');
+            break;
+            case "Director":
+            document.write('Greetings');
+            break;
+            case '':
+            document.write('No login');
+            break;
+            default:
+            document.write('.....');
+        }
+    </script>
+</body>
+</html>

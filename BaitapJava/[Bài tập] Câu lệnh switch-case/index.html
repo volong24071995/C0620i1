@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính được số ngày trong một tháng</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" name="inputmonth" id="monthmonth"/>
+    </form>
+    <button type="button" onclick="month()">Tính số ngày</button><br>
+    <dic id="output"></div>
+    <script>
+        // 1, 3,5,7,8,10,12 có 31 ngày.
+        // Các tháng còn lại là 30 ngày.
+        // Tháng 2 có 28 hoac 29 ngày.
+        var monthcopy;
+        function month(){
+            monthcopy=Number(document.getElementById('monthmonth').value);  
+            switch (monthcopy){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+            document.getElementById('output').innerHTML=('Co 31 ngay');
+            break;
+            case 2: 
+            document.getElementById('output').innerHTML=('Co 28 hoac 29 ngay');
+            break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+            document.getElementById('output').innerHTML=('Co 30 ngay');
+            break;
+            default: 
+            document.getElementById('output').innerHTML=('Khong co thang nay')
+        }
+        }
+    </script> 
+</body>
+</html>

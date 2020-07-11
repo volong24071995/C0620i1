@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Ứng dụng vui DoYouLoveMe</title>
+</head>
+<body>
+    <h1>Do You Love Me?</h1>
+    <form action="">
+    <input type="button" id="YesLove" onclick="Yes()" value="Yes" style="height: 50px;width: 60px;"/>
+    </form>
+    <button id="Nolove" onmouseover="No()" style="position: absolute;left: auto; top: auto; height: 50px;width: 60px;">No</button>
+    <script>
+        function Yes() {
+            document.write('<3 I love you pacpac')
+        }
+        function No(){
+            let width=window.innerWidth;
+            let height=window.innerHeight;
+            let goletf=Math.random()*(width-60);
+            let gotop=Math.random()*(height-50);
+            local=document.getElementById('Nolove').style.top=gotop+"px";
+            local=document.getElementById('Nolove').style.left=goletf+"px";
+            
+        }
+    </script>
+</body>
+</html>

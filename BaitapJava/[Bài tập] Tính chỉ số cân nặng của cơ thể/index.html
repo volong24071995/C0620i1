@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Tính chỉ số cân nặng của cơ thể</title>
+</head>
+<body>
+    <script>
+        var weight,height;
+        weight=Number(prompt('Nhập weight(kg)'));
+        height=Number(prompt('Nhập height(m)'));
+        BMI=weight/(height*height);
+        if (BMI>=30){
+            document.write('Béo phì-Obese');
+        }
+        else{
+            if (BMI>=25){
+                document.write('Thừa cân-Overwight');
+            }
+            else{
+                if (BMI>=18.5){
+                    document.write('Bình thường-Normal');
+                }
+                else{
+                    document.write('Thiếu cân-Underweight');
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>

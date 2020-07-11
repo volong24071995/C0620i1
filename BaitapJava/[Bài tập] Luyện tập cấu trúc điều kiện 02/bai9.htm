@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 9</title>
+</head>
+<body>
+    <!-- Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là: -->
+    <script>
+        let a=+(prompt('Nhập cạnh 1'));
+        let b=+(prompt('Nhập cạnh 2'));
+        let c=+(prompt('Nhập cạnh 3'));
+        if ((a<=0)||(b<=0)||(c<=0)){
+            document.write('Tam giác không thể có cạnh bằng <=0');
+        }
+        else{
+            if (((a+b)>=c)&&((a+c)>=b)&&((c+b)>=a)){
+                document.write('Các cạnh tạo nên tam giác');
+            }
+            else document.write('Ba cạnh không tạo nên tam giác');
+        }
+    </script>
+</body>
+</html>

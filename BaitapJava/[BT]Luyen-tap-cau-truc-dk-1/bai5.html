@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+</head>
+
+<body>
+    <!--  Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ -->
+    <script>
+        let a, b, c, tb;
+        a = Number(prompt('Nhập điểm bai kiểm tra'));
+        b = Number(prompt('Nhập điểm bai kiểm tra giữa kì'));
+        c = Number(prompt('Nhập điểm bai kiểm tra cuối kì'));
+        tb = (a + b + c) / 3;
+        if (tb >= 9) {
+        document.write('Học sinh xuất sắc');
+        }
+        else if (tb >= 8) {
+            document.write('Học sinh giỏi');
+        }
+        else if (tb >= 6.5) {
+            document.write('Học sinh khá');
+        }
+        else if (tb >= 5) {
+            document.write('Học sinh trung bình');
+        }
+        else if (tb >= 3.5) {
+            document.write('Học sinh kém');
+        }
+        else {
+            document.write('Học sinh yếu')
+        }
+
+
+    </script>
+</body>
+
+</html>

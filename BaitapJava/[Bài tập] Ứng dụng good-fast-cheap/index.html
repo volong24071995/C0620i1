@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[*Bài tập] Ứng dụng good-fast-cheap</title>
+</head>
+
+<body>
+
+
+    <button id="action13" onclick="good()">good-off</button>
+    <hr>
+    <button id="action21" onclick="fast()">fast-off</button>
+    <hr>
+    <button id="action32" onclick="cheap()">cheap-off</button>
+    <script>
+        let on, off;
+
+        function good() {
+            document.getElementById("action13").innerHTML = ("good-on");
+
+            if (on === "good-off") {
+                document.getElementById("action32").innerHTML = ("cheap-off")
+
+            }
+        }
+        function fast() {
+            document.getElementById("action21").innerHTML = ("fast-on");
+            if (off === "fast-off") {
+                document.getElementById("action13").innerHTML = ("good-off");
+                on = "good-off"
+            }
+        }
+        function cheap() {
+            document.getElementById("action32").innerHTML = ("cheap-on");
+            on = document.getElementById("action32").innerHTML;
+            if (on === "cheap-on") {
+                document.getElementById("action21").innerHTML = ("fast-off");
+                off = "fast-off";
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>
