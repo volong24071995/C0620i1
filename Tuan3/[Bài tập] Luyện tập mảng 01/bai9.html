@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i;
+        let a = [];
+        let b = [];
+        let c = [];
+        for (i = 0; i < 10; i++) {
+            x = parseInt(Math.round(Math.random() * 20));
+            a.push(x);
+        }
+        document.write(a);
+        document.write('<br>');
+        for (i = 0; i < 10; i++) {
+            x = parseInt(Math.round(Math.random() * 20));
+            b.push(x);
+        }
+        document.write(b);
+        document.write('<br>');
+        for (i = 0; i < 20; i++) {
+            x = parseInt(Math.round(Math.random() * 20));
+            c.push(x);
+        }
+        c=c.concat(a,b);
+        document.write(c);
+    </script>
+</body>
+</html>

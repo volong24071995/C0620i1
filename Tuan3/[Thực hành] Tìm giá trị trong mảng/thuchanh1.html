@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] Tìm giá trị trong mảng</title>
+</head>
+<body>
+    <script>
+        let i,x,y,n,dem;
+        let mang=[];
+        dem=0;
+        //tạo mảng
+        n=parseInt(prompt('Nhập độ dài mảng'));
+        for (i=0;i<n;i++){
+            x=prompt('Nhập phân tử');
+            mang.push(x);
+        }
+        //Kiểm tra
+        y=prompt('Nhập phần tử cần kiểm tra trong mảng');
+        for(i=0;i<n;i++){
+            if(mang[i]===y){
+                document.write("Vị trí "+i+"<br>");
+                dem=dem+1;
+            }
+        }
+        if (dem===0){
+                document.write('Không có phân tử giống');
+        }
+        
+    </script>
+</body>
+</html>

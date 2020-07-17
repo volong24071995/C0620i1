@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i,j;
+        let mang=[];
+        for(i=0;i<10;i++){
+            x=Math.floor(Math.random()*10+1)
+            mang.push(x);
+        }
+        document.write("Mang chưa sắp xếp:"+mang);
+        document.write('<br>');
+        for(let i=0;i<10;i++){
+            for(let j=0;j<10;j++){
+                if(mang[j]<mang[j+1]){
+                    tgian=mang[j];
+                    mang[j]=mang[j+1];
+                    mang[j+1]=tgian;
+                }
+            }
+        }
+        document.write("Mang đã sắp xếp:"+mang);
+    </script>
+</body>
+</html>

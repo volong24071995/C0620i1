@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day fibonaci</title>
+</head>
+<body>
+    <script>
+        let x,y,z,i;
+        x=parseInt(prompt('Nhap gia tri 1 cua day'));
+        y=parseInt(prompt('Nhap gia tri 2 cua day'));
+        document.write("Day fibonacci: "+x+";"+y+";");
+        for(i=3;i<=20;i++){
+            z=x+y;
+            document.write(z+'; ');
+            x=y;
+            y=z;
+        }
+
+    </script>
+</body>
+</html>

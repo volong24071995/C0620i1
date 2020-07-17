@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doi cho hai so</title>
+</head>
+<body>
+    <script>
+        // ham
+        function swap(a,b){
+            let tgian=a;
+                a=b;
+                b=tgian;
+                return("a="+a+", b="+b);
+        }
+        // nhap du lieu
+        let a=+prompt("Nhập a");
+        let b=+prompt("Nhập b");
+        // xuat du lieu
+        let trave=swap(a,b);
+        document.write(trave)
+    </script>
+</body>
+</html>

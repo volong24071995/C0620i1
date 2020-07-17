@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = prompt('Nhập chuỗi 1');
+        let m = prompt('Nhập chuỗi 2');
+        let i, x;
+        let dem = 0;
+        let mangn = [];
+        let mangm = [];
+        let khac = [];
+        if (n.length !== m.length) {
+            document.write('Hai chuỗi không giống nhau')
+        }
+        else {
+            for (i = 0; i < n.length; i++) {
+                mangn.push(n[i])
+                mangm.push(m[i])
+            }
+            for (i = 0; i < n.length; i++) {
+                if (n[i] === m[i]) {
+                    dem = dem + 1;
+                }
+                else khac.push(i);
+            }
+            x = khac.join(',');
+            if (dem === n.length) {
+                document.write("Giống nhau");
+            }
+            else document.write("Khác nhau tại vi trí " + x);
+        }
+
+
+    </script>
+
+</body>
+
+</html>

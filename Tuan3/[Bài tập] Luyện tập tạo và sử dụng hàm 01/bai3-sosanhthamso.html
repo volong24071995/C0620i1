@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo hàm nhận vào hai tham số</title>
+</head>
+<body>
+    <script>
+        let n=+(prompt('Nhap vao tham so 1'));
+        let m=+(prompt('Nhap vao tham so 2'));
+        let vs=sosanh(n,m);
+        document.write(vs);
+        function sosanh(a,b){
+            if(a>b){
+                return("Tham so 1 lon hon 2");
+            }
+            else{
+                let s=a+b;
+                if(a<b){
+                    return('Tham so 1 < tham so 2.<br> Tong hai tham so la: '+s) 
+                }
+                else return('Tham so 1 = tham so 2.<br> Tong hai tham so la: '+s)
+            }
+        }
+    </script>
+</body>
+</html>

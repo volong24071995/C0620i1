@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number="0123456789"
+        let i,x,dem;
+        dem=0;
+        let mang=[];
+        let n=parseInt(prompt('Nhập độ dài mảng'));
+        for(i=0;i<n;i++){
+            x=prompt('Nhập phân tử mảng');
+            while(x.length>1){
+                x=prompt('Nhập phân tử mảng');
+            }
+            mang.push(x);
+        }
+        document.write(mang);
+        for(i=0;i<n;i++){
+            if(number.indexOf(mang[i])!==-1){
+                dem=dem+1;
+            }
+        }
+        document.write("Số kí tự số trong mảng là: "+dem);
+    </script>
+</body>
+</html>

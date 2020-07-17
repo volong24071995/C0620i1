@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> kiểm tra xem ký tự nhập vào có phải là ký tự số</title>
+</head>
+
+<body>
+    <script>
+        //ham
+        function kiemtra(x,y) {
+            let dsai;
+            for (let i = 0; i < x.length; i++) {
+                if (x.indexOf(y) !== -1) {
+                    dsai = true;
+                    break;
+                }
+                else dsai = false;
+            }
+            return dsai;
+        }
+        //nhap xuat
+        let n = prompt("Nhập kí tự")
+        while (n.length > 1) {
+            n = prompt("Nhập kí tự không phải nhập chuỗi");
+        }
+        let x = "0123456789";
+        dsai=kiemtra(x, n);
+        document.write(dsai);
+    </script>
+</body>
+
+</html>

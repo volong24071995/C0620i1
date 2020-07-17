@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let i, j, x;
+    let max = 0;
+    let s;
+    let scot0 = scot1 = scot2 = scot3 = scot4=sdcheo = 0;
+    let mxarow = 0;
+    for (i = 0; i < 5; i++) {
+      s = 0;//tim max row
+      for (j = 0; j < 5; j++) {
+        //tao bang 5 hang 5 cot
+        x = Math.round(Math.random() * 100);
+        document.write(x + ' ');
+        //tim max
+        if (x >= max) {
+          max = x;
+        }
+        //tim min
+        if (i === 0 && j === 0) {
+          min = x;
+        }
+        if (x <= min) {
+          min = x;
+        }
+        //tim max row
+        s = s + x;
+        if (s >= mxarow) {
+          mxarow = s;
+        }
+
+        //tim max colums
+        switch (j) {
+          case 0:
+            scot0 = scot0 + x;
+            break;
+          case 1:
+            scot1 = scot1 + x;
+            break;
+          case 2:
+            scot2 = scot2 + x;
+            break;
+          case 3:
+            scot3 = scot3 + x;
+            break;
+          case 4:
+            scot4 = scot4 + x;
+            break;
+        }
+        // Tính tổng đường chéo
+        switch(i){
+          case 0:
+          if(j===0){
+            sdcheo=sdcheo+x;
+          }
+          break;
+          case 1:
+          if(j===1){
+            sdcheo=sdcheo+x;
+          }
+          break;
+          case 2:
+          if(j===2){
+            sdcheo=sdcheo+x;
+          }
+          break;
+          case 3:
+          if(j===3){
+            sdcheo=sdcheo+x;
+          }
+          break;
+          case 4:
+          if(j===4){
+            sdcheo=sdcheo+x;
+          }
+          break;
+        }
+      }
+      document.write("<br>");
+    }
+    //tim max colums
+    if (scot0 > scot1) {
+      if (scot0 > scot2) {
+        if (scot0 > scot3) {
+          if (scot0 > scot4) {
+            document.write('Tông cột lớn nhất là: ' + scot0);
+          }
+          else document.write('Tông cột lớn nhất là: ' + scot4);
+        }
+        else {
+          if (scot3 > scot4) {
+            document.write('Tông cột lớn nhất là: ' + scot3);
+          }
+          else document.write('Tông cột lớn nhất là: ' + scot4);
+        }
+      }
+      else {
+        if (scot2 > scot3) {
+          if (scot2 > scot4) {
+            document.write('Tông cột lớn nhất là: ' + scot2);
+          }
+          else document.write('Tông cột lớn nhất là: ' + scot4);
+        }
+        else {
+          if (scot3 > scot4) {
+            document.write('Tông cột lớn nhất là: ' + scot3);
+          }
+          else document.write('Tông cột lớn nhất là: ' + scot4);
+        }
+      }
+    }
+    else {
+      if (scot1 > scot2) {
+        if (scot1 > scot3) {
+          if (scot1 > scot4) {
+            document.write('Tông cột lớn nhất là: ' + scot1);
+          }
+          else document.write('Tông cột lớn nhất là: ' + scot4);
+        }
+        else {
+          if (scot3 > scot4) {
+            document.write('Tông cột lớn nhất là: ' + scot3);
+          }
+          else document.write('Tông cột lớn nhất là: ' + scot4);
+        }
+      }
+      else {
+        if (scot2 > scot3) {
+          if (scot2 > scot4) {
+            document.write('Tông cột lớn nhất là: ' + scot2);
+          }
+          else document.write('Tông cột lớn nhất là:' + scot4);
+        }
+        else {
+          if (scot3 > scot4) {
+            document.write('Tông cột lớn nhất là: ' + scot3);
+          }
+          else document.write('Tông cột lớn nhất là: ' + scot4);
+        }
+      }
+    }
+      document.write("<br>");
+      // tim số lớn nhất
+      document.write('Số lớn nhất là:' + max);
+      document.write("<br>");
+      // tim số bé nhất
+      document.write('Số nhỏ nhất là:' + min);
+      document.write("<br>");
+      // tim tổng hàng lơn nhất
+      document.write("Tổng hàng lớn nhất là:" + mxarow);
+      document.write("<br>");
+      // Tổng đường chéo
+      document.write("Tổng đường chéo là:" + sdcheo);
+  </script>
+</body>
+
+</html>

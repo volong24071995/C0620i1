@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viết hàm tính diện tích, hàm tính chu vi hình tròn</title>
+</head>
+
+<body>
+    <script>
+        //tao hàm
+        function chuvi(x) {
+            let a = 2 * x * 3.14;
+            return ("Chu vi hình tròn là " + a);
+        }
+        function dientich(x) {
+            let b = (x ** 2) * 3.14;
+            return ("Diện tích hình tròn là " + b);
+        }
+        // khai bao gia tri
+        let n = parseInt(prompt("Nhập bán kính hình tròn"));
+        let dsai = confirm('Bạn muốn tính diện tích phải không?');
+        //xuat gia tri theo dieu kien
+        let s = dientich(n);
+        let perimeter = chuvi(n);
+        if (dsai) {
+            document.write(s);
+        }
+        else {
+            dsai = confirm('Bạn muốn tính chu vi phải không?')
+            if (dsai) { 
+                document.write(perimeter);
+            }
+            else {
+                dsai = confirm('Bạn muốn tính cả hai cùng 1 lúc phải không?');
+                if (dsai) {
+                    document.write(perimeter)
+                    document.write("<br>");
+                    document.write(s);
+                }
+                else alert("Kết thúc!!!!!");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi hàm.</title>
+</head>
+<body>
+    <script>
+        let n=+(prompt("Nhap so doi vao"));
+        document.write('Doi so ban dau la: '+n);
+        document.write('<br>');
+        let up=tang1(n);
+        document.write(up);
+        function tang1(x){
+            x=x+1
+            return('Doi so tang 1 la: '+x)
+        }
+    </script>
+</body>
+</html>

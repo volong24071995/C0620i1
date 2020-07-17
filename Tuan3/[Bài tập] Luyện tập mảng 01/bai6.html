@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let i, V;
+        let dem = 0;
+        let mang = [];
+        for (i = 0; i < 10; i++) {
+            x = parseInt(Math.round(Math.random() * 10));
+            mang.push(x);
+        }
+        V = parseInt(prompt("Nhập số nguyên V:"));
+        for (i = 0; i < 10; i++) {
+            if (mang[i] === V) {
+                document.write("V is in the array tại vị trí:" + i);
+                document.write("<br>");
+                dem = dem + 1;
+            }
+        }
+        if (dem === 0) {
+            document.write("V is not in the array");
+        }
+    </script>
+</body>
+
+</html>

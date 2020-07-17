@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[*Bài tập] Luyện tập mảng 02</title>
+</head>
+<body>
+    <script>
+        let i,j;
+        let n=parseInt(prompt('Nhập độ dài mảng chính'));
+        let m=parseInt(prompt('Nhập độ dài mảng con'));
+        let mang=[];
+        for(i=0;i<n;i++){
+            for(j=0;j<m;j++){
+                x=parseInt(Math.round(Math.random()*100+1));
+                mang.push(x);
+                document.write(x+' ');
+            }
+            document.write('<br>')
+        }
+    </script>
+</body>
+</html>

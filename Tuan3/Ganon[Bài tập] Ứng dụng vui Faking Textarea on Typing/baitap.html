@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[*Bài tập] Ứng dụng vui Faking Textarea on Typing</title>
+</head>
+
+<body onload="docReady()">
+    <textarea name="" id="Faking" cols="30" rows="10"></textarea>
+    <script>
+        function docReady() {
+            window.addEventListener('keydown', moveSelection);
+        }
+        function moveSelection(evt) {
+            switch (evt.keyCode) {
+                case 127:
+                    document.getElementById("Faking").innerHTML = " ";
+                default:
+                    let x = document.getElementById('Faking').value;
+                    console.log(x.length);
+                    switch (x.length) {
+                        case 1:
+                            document.getElementById("Faking").value = "A";
+                            break;
+                        case 2:
+                            document.getElementById("Faking").value = "An";
+                            break;
+                        case 3:
+                            document.getElementById("Faking").value = "Anh";
+                            break;
+                        case 4:
+                            document.getElementById("Faking").value = "Anh ";
+                            break;
+                        case 5:
+                            document.getElementById("Faking").value = "Anh Y";
+                            break;
+                        case 6:
+                            document.getElementById("Faking").value = "Anh Ye";
+                            break;
+                        case 7:
+                            document.getElementById("Faking").value = "Anh Yeu";
+                            break;
+                        case 8:
+                            document.getElementById("Faking").value = "Anh Yeu ";
+                            break;
+                        case 9:
+                            document.getElementById("Faking").value = "Anh Yeu E";
+                            break;
+                        case 10:
+                            document.getElementById("Faking").value = "Anh Yeu Em";
+                            break;
+                        case 11:
+                            document.getElementById("Faking").value = "Anh Yeu Em!";
+                            break;
+                        default:
+                            document.getElementById("Faking").value = "";
+                            break;
+                    }
+
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

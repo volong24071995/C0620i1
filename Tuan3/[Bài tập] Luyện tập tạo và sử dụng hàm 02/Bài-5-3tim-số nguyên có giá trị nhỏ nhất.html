@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>số nguyên có giá trị nhỏ nhất.</title>
+</head>
+
+<body>
+    <script>
+        // ham
+        function minin3(mang) {
+            let min = mang[0]
+            for (let i = 0; i < mang.length; i++) {
+                if (min >= mang[i]) {
+                    min = mang[i]
+                }
+            }
+            return min;
+        }
+        //nhap
+        let x = +prompt("Nhập x");
+        let y = +prompt("Nhập y");
+        let z = +prompt("Nhập z");
+        // tao mang
+        let mang = [];
+        mang.push(x, y, z);
+        //xuat du lieu
+        min=minin3(mang);
+        document.write("Số nhỏ nhất là "+min);
+    </script>
+</body>
+
+</html>

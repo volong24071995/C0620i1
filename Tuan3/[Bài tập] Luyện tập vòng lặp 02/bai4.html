@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hình chữ nhật</title>
+</head>
+
+<body>
+    <script>
+        /*
+        let i, j;
+        for(i=0;i<=21;i++){
+            document.write('*');
+        }
+        document.write('<br>');
+        for(i=1;i<=5;i++){
+            document.write('*');
+            for(j=1;j<=20;j++){
+                document.write('&nbsp;&nbsp;');
+            }
+            document.write('*');
+            document.write('<br>'); 
+        }
+        for(i=0;i<=21;i++){
+            document.write('*');
+        }
+        */
+        let i, k, n, m;
+        n = parseInt(prompt('Nhập n'));
+        m = parseInt(prompt('Nhập m'))
+        for (i = 1; i<=n; i++) {
+            for (k = 1; k <= m; k++) {
+                if (i == 1 || k == 1 || i == n || k == m) {
+                    document.write("*&nbsp;&nbsp;");
+                }
+                else document.write("&nbsp;&nbsp;&nbsp;&nbsp;");
+            }
+            document.write("<br>");
+        }
+        
+    </script>
+</body>
+
+</html>

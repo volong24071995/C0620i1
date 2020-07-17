@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số nguyên âm dương</title>
+</head>
+
+<body>
+    <script>
+        //nhap du lieu
+        let n = parseInt(prompt("Nhập số nguyên"));
+        while (n === 0) {
+            alert("Không là số nguyên âm hay dương");
+            n = parseInt(prompt("Nhập lại số nguyên"));
+        }
+        // ham
+        function amduong(x) {
+            if (x > 0) return " là số nguyên dương";
+            return " là số nguyên âm" ;
+        }
+        //xuat du lieu
+        let x=amduong(n);
+        document.write(x);
+    </script>
+</body>
+
+</html>

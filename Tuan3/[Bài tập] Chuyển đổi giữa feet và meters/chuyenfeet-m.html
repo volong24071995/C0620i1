@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Chuyển đổi giữa feet và meters</title>
+</head>
+
+<body>
+    <form>
+        <p>Metters<input type="number" id="mets" oninput="feets(this.value)"></p>
+        <p>Feet<input type="number" id="feet" oninput="meters(this.value)"></p>
+    </form>
+    <script>
+        //ham tinh chuyem f-m
+        function meters(f) {
+            let met = 0.305 * f;
+            document.getElementById("mets").value = met;
+            if(f.length===0){
+                document.getElementById("mets").value ="";
+            }
+        }
+        //ham tinh chuyem m-f
+        function feets(m) {
+            let feet = m * (1 / 0.305);
+            document.getElementById("feet").value = feet;
+            if(m.length===0){
+                document.getElementById("feet").value ="";
+            }
+        }
+    </script>
+</body>
+
+</html>

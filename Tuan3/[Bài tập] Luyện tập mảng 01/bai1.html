@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[*Bài tập] Luyện tập mảng 01</title>
+</head>
+<body>
+    <script>
+        let i,dem;
+        dem=0;
+        let mang=[];
+        for(i=0;i<10;i++){
+            x=parseInt(Math.round(Math.random()*20));
+            mang.push(x);
+        }
+        for(i=0;i<10;i++){
+            if(mang[i]>=10){
+                dem=dem+1;
+            }
+        }
+        document.write('Số lớn hơn 10 có:'+dem);
+        
+    </script>
+</body>
+</html>

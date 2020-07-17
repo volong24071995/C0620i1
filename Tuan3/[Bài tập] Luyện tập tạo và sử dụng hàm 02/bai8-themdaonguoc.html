@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Them dao nguoc</title>
+</head>
+<body>
+    <script>
+        //ham
+        function reverse(x,mang){
+            mang.push(x);
+            return mang.reverse();
+        }
+        //khoi tao mang
+        let n=+prompt("Nhập độ dài mảng");
+        let aray=[];
+        for(let i=0;i<n;i++){
+            aray.push(Math.floor(Math.random()*49+1));
+        }
+        // nhap du lieu
+        let x=+prompt("Nhập số nguyên bất kỳ");
+        // xuat du lieu
+        document.write("Mảng ban đầu là " +aray);
+        document.write("<br>");
+        let mang=reverse(x,aray);
+        document.write("Mảng đảo ngược là " +mang);
+    </script>
+</body>
+</html>

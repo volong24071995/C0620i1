@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Sử dụng các hàm có sẵn của mảng</title>
+</head>
+<body>
+    <script>
+        let i,x,n,chuoi;
+        let mang=[];
+        n=parseInt(prompt('Nhập độ dài của mảng'));
+        for(i=0;i<n;i++){
+            x=prompt('Nhập giá trị phần tử của mảng');
+            mang.push(x);
+        }
+        //nối tất cả các phần tử trong một mảng chuỗi lại với nhau. join() hoac toString()
+        chuoi=mang.join("");
+        document.write(chuoi);
+    </script>
+</body>
+</html>

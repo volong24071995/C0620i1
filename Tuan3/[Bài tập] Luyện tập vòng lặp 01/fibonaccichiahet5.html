@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day fibonacci chia het cho 5</title>
+</head>
+
+<body>
+    <script>
+        let x, y, z, i;
+        n = 0;
+        x = parseInt(prompt('Nhap gia tri 1 cua day (Yeu cau khong chia het cho 5)'));
+        y = parseInt(prompt('Nhap gia tri 2 cua day (Yeu cau khong chia het cho 5)'));
+        // Hướng dẫn sử dụng
+        //Nhập vào số chia hết thì con gì vui nữa :D.Tốt nhât là 1;1 còn tạo dãy khac thì tuy bạn :D
+        while (n !== 1) {
+            z = x + y;
+            if (z % 5 === 0) {
+                document.write('So z so trong day chia het cho 5 la: ' + z);
+                n += 1;
+            }
+            else {
+                x = y;
+                y = z;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

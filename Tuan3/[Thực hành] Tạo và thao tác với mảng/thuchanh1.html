@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thao tac vs mang</title>
+</head>
+
+<body>
+    <h1>sample screen</h1>
+    <input type="text" id="nhap">
+    <button onclick="add()">Add</button>
+    <button onclick="display()">Display</button><br>
+    <span id="output"></span>
+    <script>
+        let array = [];
+        function add() {
+            x = document.getElementById('nhap').value;
+            array.push(x);
+            document.getElementById("nhap").value = " ";
+        }
+        function display() {
+            let i, e;
+            e="<hr>"
+            for (i = 0; i < array.length; i++) {
+                e=e+array[i]+"<br>";
+            }
+            document.getElementById('output').innerHTML +=e
+        }
+    </script>
+</body>
+
+</html>

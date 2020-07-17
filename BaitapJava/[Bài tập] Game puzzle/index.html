@@ -9,144 +9,95 @@
 </head>
 
 <body>
-    <button onclick="randomanh()">Play</button>
-    <div id="class1" onclick="anh1()"></div>
-    <div id="class2" onclick="anh2()"></div>
-    <div id="class11" onclick="hinh11()"></div>
-    <div id="class12" onclick="hinh22()"></div>
-    <div id="class111" onclick="anh111()"></div>
-    <div id="class112" onclick="anh112()"></div>
-    <div id="class1111" onclick="anh1111()"></div>
-    <div id="class1112" onclick="anh1112()"></div>
-    <button class="complete" onclick=" xong()">Xong-anh</button>
-    <script>
-        
-        // function randomanh(){
-            // tang 1
-        //     let x,y,z,c;
-        //     x=document.getElementById("class1").style.zIndex=parseInt(Math.random()*(10-7)+7);
-        //     if(x===(y=(document.getElementById("class11").style.zIndex=parseInt(Math.random()*(10-7)+7)))){
-        //         y=document.getElementById("class11").style.zIndex=parseInt(Math.random()*(10-7)+7)
-        //     }else y=document.getElementById("class11").style.zIndex;
-        //     if ((z=document.getElementById("class111").style.zIndex=parseInt(Math.random()*(10-7)+7)===x)||(z===y)){
-        //         z=document.getElementById("class111").style.zIndex=parseInt(Math.random()*(10-7)+7);
-        //     }else z=document.getElementById("class111").style.zIndex;
-        //     if((c=document.getElementById("class1111").style.zIndex=parseInt(Math.random()*(10-7)+7)===x)||(c===y)||(c===z)){
-        //         c=document.getElementById("class1111").style.zIndex=parseInt(Math.random()*(10-7)+7);
-        //     }else  c=document.getElementById("class1111").style.zIndex;
-        //     // tang 2
-        //     let v,b,n,m;
-        //     v=document.getElementById("class2").style.zIndex=parseInt(Math.random()*(10-7)+7);
-        //     if(v===(b=(document.getElementById("class12").style.zIndex=parseInt(Math.random()*(10-7)+7)))){
-        //         b=document.getElementById("class12").style.zIndex=parseInt(Math.random()*(10-7)+7)
-        //     }else b=document.getElementById("class12").style.zIndex;
-        //     if ((n=document.getElementById("class112").style.zIndex=parseInt(Math.random()*(10-7)+7)===v)||(z===b)){
-        //         n=document.getElementById("class112").style.zIndex=parseInt(Math.random()*(10-7)+7);
-        //     }else n=document.getElementById("class112").style.zIndex;
-        //     if((m=document.getElementById("class1112").style.zIndex=parseInt(Math.random()*(10-7)+7)===v)||(c===v)||(c===v)){
-        //         m=document.getElementById("class1112").style.zIndex=parseInt(Math.random()*(10-7)+7);
-        //     }else  m=document.getElementById("class1112").style.zIndex; 
-        // }
-            
-        function randomanh() {
-            document.getElementById("class1").style.zIndex = parseInt(Math.random() * (10 - 7) + 7);
-            document.getElementById("class2").style.zIndex = parseInt(Math.random() * (10 - 7) + 7);
-            document.getElementById("class11").style.zIndex = parseInt(Math.random() * (10 - 7) + 7);
-            document.getElementById("class12").style.zIndex = parseInt(Math.random() * (10 - 7) + 7);
-            document.getElementById("class111").style.zIndex = parseInt(Math.random() * (10 - 7) + 7);
-            document.getElementById("class112").style.zIndex = parseInt(Math.random() * (10 - 7) + 7);
-            document.getElementById("class1111").style.zIndex = parseInt(Math.random() * (10 - 7) + 7);
-            document.getElementById("class1112").style.zIndex = parseInt(Math.random() * (10 - 7) + 7);
-        }
-        function anh1() {
-            let x = document.getElementById("class1").style.zIndex;
-            if (x === 10) {
-                document.getElementById("class1").style.zIndex = 10;
-            } else document.getElementById("class1").style.zIndex = parseInt(Math.random() * (10 - 7) + 7);
-        }
-        function anh2() {
-            let v = document.getElementById("class2").style.zIndex;
-            if (v === 10) {
-                document.getElementById("class2").style.zIndex = 10;
-            } else document.getElementById("class2").style.zIndex = parseInt(Math.random() * (10 - 7) + 7);
-        }
-        function hinh11() {
-            let y = document.getElementById("class11").style.zIndex;
-            if (y === 9) {
-                document.getElementById("class11").style.zIndex = 9;
-            } else document.getElementById("class11").style.zIndex = parseInt(Math.random() * (10 - 7) + 7);
-        }
-        function hinh22() {
-            let b = document.getElementById("class12").style.zIndex;
-            if (b === 9) {
-                document.getElementById("class12").style.zIndex = 9;
-            } else document.getElementById("class12").style.zIndex = parseInt(Math.random() * (10 - 7) + 7);
-        }
-        function anh111() {
-            let z = document.getElementById("class111").style.zIndex;
-            if (z === 8) {
-                document.getElementById("class111").style.zIndex = 8;
-            } else document.getElementById("class111").style.zIndex = parseInt(Math.random() * (10 - 7) + 7);
-        }
-        function anh112() {
-            let n = document.getElementById("class112").style.zIndex;
-            if (n === 8) {
-                document.getElementById("class112").style.zIndex = 8;
-            } else document.getElementById("class112").style.zIndex = parseInt(Math.random() * (10 - 7) + 7);
-        }
-        function anh1111() {
-            let c = document.getElementById("class1111").style.zIndex;
-            if (c === 7) {
-                document.getElementById("class1111").style.zIndex = 7;
-            } else document.getElementById("class1111").style.zIndex = parseInt(Math.random() * (10 - 7) + 7);
-        }
-        function anh1112() {
-            let m = document.getElementById("class1112").style.zIndex;
-            if (m === 7) {
-                document.getElementById("class1112").style.zIndex = 7;
-            } else document.getElementById("class1112").style.zIndex = parseInt(Math.random() * (10 - 7) + 7);
-        }
-        function xong() {
-            //tang1
-            let x, y, z, c;
-            //tang2
-            let v, b, n, m;
-            //tang1
-            x = document.getElementById("class1").style.zIndex;
-            y = document.getElementById("class11").style.zIndex;
-            z = document.getElementById("class111").style.zIndex;
-            c = document.getElementById("class1111").style.zIndex;
-            // tang2
-            v = document.getElementById("class2").style.zIndex;
-            b = document.getElementById("class12").style.zIndex;
-            n = document.getElementById("class112").style.zIndex;
-            m = document.getElementById("class1112").style.zIndex;
-            if (x === v) {
-                document.getElementById("class1").style.zIndex = 4;
-                document.getElementById("class2").style.zIndex = 4;
-                alert("xong");
-            } else alert('an gian');
-
-            if (y === b) {
-                document.getElementById("class11").style.zIndex = 3;
-                document.getElementById("class12").style.zIndex = 3;
-                alert("xong");
-            } else alert('an gian')
-
-            if (z === n) {
-                document.getElementById("class111").style.zIndex = 2;
-                document.getElementById("class112").style.zIndex = 2;
-                alert("xong");
-            } else alert('an gian')
-
-            if (c === m) {
-                document.getElementById("class1111").style.zIndex = 1;
-                document.getElementById("class1112").style.zIndex = 1;
-                alert("xong");
-            } else alert('an gian')
-        }
-
-    </script>
+    <button onclick="randomanh()">Play</button><br>
+    <img src="anh1.PNG" id="head" onclick="img1()" />
+    <img src="anh2.png" id="dear" onclick="img2()" />
+    <img src="anh3.png" id="last" onclick="img3()" /><br>
+    <button onclick="complete()">Hoành thành</button>
 </body>
+<script>
 
+    function randomanh() {
+        let a, b, c;
+        a = document.getElementById("head");
+        b = document.getElementById("dear");
+        c = document.getElementById("last");
+        let x = Math.round(Math.random() * 2 + 1);
+        switch (x) {
+            case 1:
+                a.src = "anh1.PNG";
+                b.src = "anh3.PNG";
+                c.src = "anh2.PNG";
+                break;
+            case 2:
+                a.src = "anh3.PNG";
+                b.src = "anh1.PNG";
+                c.src = "anh2.PNG";
+                break;
+            case 3:
+                a.src = "anh2.PNG";
+                b.src = "anh1.PNG";
+                c.src = "anh3.PNG";
+                break;
+        }
+    }
+    function img1() {
+        a = document.getElementById("head");
+        let x = Math.round(Math.random() * 2 + 1);
+        switch (x) {
+            case 1:
+                a.src = "anh1.PNG";
+                break;
+            case 2:
+                a.src = "anh2.PNG";
+                break;
+            case 3:
+                a.src = "anh3.PNG";
+                break;
+        }
+
+    }
+    function img2() {
+        b = document.getElementById("dear");
+        let x = Math.round(Math.random() * 2 + 1);
+        switch (x) {
+            case 1:
+                b.src = "anh1.PNG";
+                break;
+            case 2:
+                b.src = "anh2.PNG";
+                break;
+            case 3:
+                b.src = "anh3.PNG";
+                break;
+        }
+    }
+    function img3() {
+        c = document.getElementById("last");
+        let x = Math.round(Math.random() * 2 + 1);
+        switch (x) {
+            case 1:
+                c.src = "anh1.PNG";
+                break;
+            case 2:
+                c.src = "anh2.PNG";
+                break;
+            case 3:
+                c.src = "anh3.PNG";
+                break;
+        }
+    }
+    function complete() {
+        a = document.getElementById("head").src;
+        console.log(a)
+        b = document.getElementById("dear").src;
+        console.log(b)
+        c = document.getElementById("last").src;
+        console.log(c)
+        if ((a === 'http://127.0.0.1:5500/BaitapJava/[B%C3%A0i%20t%E1%BA%ADp]%20Game%20puzzle/anh1.PNG')&&(b === 'http://127.0.0.1:5500/BaitapJava/[B%C3%A0i%20t%E1%BA%ADp]%20Game%20puzzle/anh2.PNG')&&(c === 'http://127.0.0.1:5500/BaitapJava/[B%C3%A0i%20t%E1%BA%ADp]%20Game%20puzzle/anh3.PNG')){
+            alert("I <3 U pacpac")
+            
+        }
+    }
+</script>
 </html>

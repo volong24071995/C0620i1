@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In tam giác</title>
+</head>
+
+<body>
+    <script>
+        let i, j, z;
+        // Tam giac 1
+        for (i = 0; i < 5; i++) {
+            for (j = 0; j <= i; j++) {
+                document.write('*')
+            }
+            for (z = 4; z >= i; z--) {
+                document.write('&nbsp;'+'&nbsp;');
+            }
+            document.write('<br>');
+        }
+        document.write('<br>');
+        //Tam giac 2
+        for (i = 0; i < 5; i++) {
+            for (j = 4; j >= i; j--) {
+                document.write('*')
+            }
+            for (z = 0; z <= i; z++) {
+                document.write('&nbsp;'+'&nbsp;');
+            }
+            document.write('<br>');
+        }
+        document.write('<br>');
+        // tam giac 3
+        for (i = 0; i < 5; i++) {
+            for (z = 4; z >= i; z--) {
+                document.write('&nbsp;'+'&nbsp;');
+            }
+            for (j = 0; j <= i; j++) {
+                document.write('*')
+            }
+            document.write('<br>');
+        }
+        document.write('<br>');
+        //Tam giac 4
+        for (i = 0; i < 5; i++) {
+            for (z = 0; z <= i; z++) {
+                document.write('&nbsp;'+'&nbsp;');
+            }
+            for (j = 4; j >= i; j--) {
+                document.write('*')
+            }
+            document.write('<br>');
+        }
+    </script>
+</body>
+
+</html>

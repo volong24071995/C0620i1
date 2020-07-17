@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i,j;
+        let mang=[];
+        for(i=0;i<10;i++){
+            x=parseInt(prompt('Nhập 10 phân tử khac nhau:'));
+            mang.push(x);
+        }
+        console.log(mang)
+        let max=mang[0];
+        for(i=0;i<10;i++){
+            if(mang[i]>=max){
+                max=mang[i];
+                j=i;
+            }
+        }
+        document.write("Số lớn nhất là: "+max+'tại vị trí'+j);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+
+<body>
+    <form>
+        <h1>Temprature Converter</h1>
+        <p>Type a value in the Fahrenheit field to convert the value to Celcius:</p>
+        <label>Fahrenheit</label>
+        <input type="text" id="valueis" oninput="tinhtoan(this.value)">
+    </form>
+    <p>Celcius: <span id="ketqua"></span></p>
+</body>
+<script>
+    function tinhtoan(number) {
+        if (!Number.isInteger(number)) {
+            document.getElementById('ketqua').innerHTML = 'Ko phai so';
+            return;
+        }
+
+        number = parseFloat(number)
+        document.getElementById('ketqua').innerHTML = +((number - 32) / 1.8);
+    }
+</script>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đoán số ngẫu nhiên</title>
+</head>
+
+<body>
+    <button onclick="play()">PLAY GAME</button>
+    <script>
+        function play() {
+            let x = parseInt(prompt('Nhập mốc đầu'));
+            let y = parseInt(prompt('Nhập mốc cuối'));
+            let z = parseInt(Math.random() * (y - x) + x);
+            let i;
+            let a = parseInt(prompt('Nhập số bạn đoán:'));
+            /* Dùng vong for
+            for (i = 1; i <= 3; i++) {
+                if (a === z) {
+                    document.write('Chúc mừng!!Ahihihi!! Bạn đoán đúng rồi nhé')
+                    i = 3;
+                }
+                else if ((a > z) && (i < 3)) {
+                    a = parseInt(prompt('Bạn đoán cao hơn rồi!!Chon lại cho đúng nhé'));
+                }
+                else if ((a < z) && (i < 3)) {
+                    a = parseInt(prompt('Bạn đoán thấp hơn rồi!!Chọn lại cho đúng nhé'));
+                }
+                else if (i === 3) {
+                    document.write('Bạn đoán sai rồi')
+                }
+            } */
+            
+            // Dùng vong while
+            i=1;
+            while(i<=3){
+                if (a === z) {
+                    document.write('Chúc mừng!!Ahihihi!! Bạn đoán đúng rồi nhé')
+                    i=4;
+                }
+                else if ((a > z) && (i < 3)) {
+                    a = parseInt(prompt('Bạn đoán cao hơn rồi!!Chon lại cho đúng nhé'));
+                    i++;
+                }
+                else if ((a < z) && (i < 3)) {
+                    a = parseInt(prompt('Bạn đoán thấp hơn rồi!!Chọn lại cho đúng nhé'));
+                    i++;
+                }
+                else if (i === 3) {
+                    document.write('Bạn đoán sai rồi')
+                    i++
+                }
+            }
+
+        
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

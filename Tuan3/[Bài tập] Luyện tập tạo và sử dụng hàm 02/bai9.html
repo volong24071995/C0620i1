@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm kí tự đếm số lần xuất hiện</title>
+</head>
+
+<body>
+    <script>
+        // khởi tạo mảng
+        let n = +prompt("Nhập độ dài của mảng");
+        let mang = [];
+        for (let i = 0; i < n; i++) {
+            let x = prompt("Nhập kí tự của mảng");
+            while (x.length > 1 || x.length === 0) {
+                x = prompt("Nhập lại kí tự của mảng");
+            }
+            mang.push(x);
+        }
+        // hàm
+        function kiemtra(mang, a) {
+            let dem = 0;
+            for (i = 0; i < mang.length; i++) {
+                if (mang[i] === a) {
+                    dem = dem + 1;
+                }
+            }
+            return dem;
+        }
+        //Nhập và trả kết quả
+        let a = prompt("Nhập kí tự so sánh");
+        while (a.length > 1 || a.length === 0) {
+            a = prompt("Nhập lại kí tự so sánh");
+        }
+        let dem= kiemtra(mang, a);
+        if(dem>0){
+            document.write("Kí tự thuộc mảng với số lần xuất hiện "+dem);
+        }
+        else document.write("Kí tự không thuộc mảng index= -1");
+    </script>
+</body>
+
+</html>

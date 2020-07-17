@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đệ quy</title>
+</head>
+
+<body>
+    <script>
+        let m = prompt("Nhập chuỗi");
+        function chuoi(n) {
+            if (n[0] === n[n.length - 1]) {
+                n = n.substring(1, n.length - 1);
+                if (n.length === 1||n.length===0) {
+                    return true;   
+                }
+                else return chuoi(n);                             
+            }
+            else return false;
+        }
+        let dsai=chuoi(m);
+        if(dsai){
+            document.write(dsai);
+        }
+        else document.write(dsai);
+
+
+
+
+    </script>
+</body>
+
+</html>

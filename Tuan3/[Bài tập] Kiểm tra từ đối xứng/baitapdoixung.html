@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[*Bài tập] Kiểm tra từ đối xứng</title>
+</head>
+
+<body>
+    <script>
+        // nhap gia tri vao
+        let n = prompt("Nhập vào chuỗi");
+        // tao ham
+        function palindrome(n) {
+            let x,i;
+            if (n.length % 2 === 0) {
+                x = n.length / 2;
+            }
+            else x = ((n.length - 1) / 2) + 1;
+            // mang1
+            let mang1 = [];
+            for (i = 0; i < x; i++) {
+                mang1.push(n[i]);
+            }
+            // mang2
+            let mang2 = [];
+            for (i = (n.length - 1); i >= (x - 1); i--) {
+                mang2.push(n[i]);
+            }
+            // so sanh
+            let palindrome;
+            for (let i = 0; i < mang1.length; i++) {
+                if (mang1[i] === mang2[i]) {
+                    palindrome = true;
+                    return palindrome;
+                }
+                else {
+                    palindrome = false;
+                    return palindrome;
+                    break;
+                }
+            }
+        }
+        // xuat ket qua
+        palindrome= palindrome(n);
+        if (palindrome) {
+            document.write(palindrome);
+        }
+        else document.write(palindrome);
+        
+    </script>
+</body>
+
+</html>

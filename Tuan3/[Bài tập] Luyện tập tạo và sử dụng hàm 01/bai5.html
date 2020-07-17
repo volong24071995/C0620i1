@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        let name = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let star = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        function kiemtra(names, stars, ten) {
+            let dem = 0;
+            for (let i = 0; i < names.length; i++) {
+                if (ten === names[i]) {
+                    return (ten + "co chom sao la: " + stars[i]);
+                    dem = dem + 1
+                    break;
+                }
+            }
+            if (dem === 0) {
+                return (ten + " khong co trong danh sach ");
+            }
+        }
+        let n = prompt("Nhap ten can tim");
+        n=kiemtra(name, star, n);
+        document.write(n);
+    </script>
+</body>
+
+</html>

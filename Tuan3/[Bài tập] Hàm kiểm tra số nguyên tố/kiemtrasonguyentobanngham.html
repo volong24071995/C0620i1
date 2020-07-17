@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let i;
+        let dem = 0;
+        document.write('Số nguyên <1000 là:<br> ');
+        for (i = 2; i < 1000; i++) {
+            if (kiemtra(i)) {
+                document.write(i + ",");
+                dem = dem + 1;
+            }
+            // 45 thi xuong hàng
+            if (dem === 45) {
+                document.write("<br>");
+                dem=0;
+            }
+        }
+        function kiemtra(i) {
+            let dem = 0;
+            for (let j = 1; j <= i; j++) {
+                if (i % j == 0) {
+                    dem = (dem + 1);
+                }
+            }
+            if (dem === 2) return true;
+            return false;
+        }
+
+    </script>
+</body>
+
+</html>

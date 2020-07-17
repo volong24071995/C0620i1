@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ thường trong chuỗi vừa nhập sang thành dạng chữ hoa</title>
+</head>
+<body>
+    <script>
+        let Hoa="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let mang=[];
+        let i;
+        n=prompt("Nhap chuoi ");
+        for(i=0;i<n.length;i++){
+            if (Hoa.indexOf(n[i]===-1)){
+                mang.push(n[i].toUpperCase());
+            }
+            else mang.push(n[i]);
+        }
+        document.write(mang.join(''));
+    </script>
+</body>
+</html>

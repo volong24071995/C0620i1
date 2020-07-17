@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Sử dụng các hàm có sẵn của mảng</title>
+</head>
+<body>
+    <script>
+        let i,j,n,x;
+        mang=[];
+        mangafter=[];
+        n=prompt('Nhập số');
+        for(i=0;i<n.length;i++){
+            j=parseInt(n[i]);
+            if(parseInt(n[i])%2===0&&parseInt(n[i+1])%2===0){
+                mang.push(n[i]);
+                mang.push("-");
+            }else mang.push(n[i]);
+        }
+        document.write(mang.join(''));
+    </script>
+</body>
+</html>

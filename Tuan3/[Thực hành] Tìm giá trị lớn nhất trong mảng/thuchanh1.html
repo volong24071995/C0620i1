@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] Tìm giá trị lớn nhất trong mảng</title>
+</head>
+
+<body>
+    <script>
+        let i,max, vitri;
+        let numbers = [-3, 5, 1, 3, 2, 10];
+        //Kiểm tra phân tư
+        max = 0;
+        for (i = 0; i < numbers.length; i++) {
+            if (numbers[i] > max) {
+                max = numbers[i];
+                vitri = i;
+            }
+        }
+        document.write('Số lớn nhất trong mảng là: ' + max + '<br>Tại vị trí trong mảng là: ' + vitri);
+    </script>
+
+</body>
+
+</html>

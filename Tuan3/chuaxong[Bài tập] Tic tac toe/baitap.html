@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Tic tac toe</title>
+</head>
+
+<body>
+    <span id="invao"></span>
+    <script>
+        let i, j, play;
+        //in cai ban co
+        let row = new Array(5);
+        for (i = 0; i < 5; i++) {
+            row[i] = new Array(5);
+            for (j = 0; j < 5; j++) {
+                row[i][j] = ".";
+                document.getElementById('invao').innerHTML += row[i][j]+"&nbsp;&nbsp;";
+            }
+            document.getElementById('invao').innerHTML += ('<br>');
+        }
+        function go() {
+            i = parseInt(prompt('Nhập vị trí hàng'));
+            j = parseInt(prompt('Nhập vị trí cột'));
+            document.getElementById('invao').innerHTML = " ";
+            row[i][j] = "x";
+            for (i = 0; i < row.length; i++) {
+                for (j = 0; j < row[i].length; j++) {
+                    document.getElementById('invao').innerHTML += row[i][j]+"&nbsp;&nbsp;";
+                }
+                document.getElementById('invao').innerHTML += ('<br>');
+            }
+        }
+        play = parseInt(prompt('Nhập số người chơi'));
+        if (play === 2) {
+            document.write('<button onclick="go()">Play1</button>');
+            document.write('<button onclick="go2()">Play2</button>');
+        }
+        else {
+            alert('Chỉ có 2 người chơi và một người chơi');
+            document.write('<button onclick="go()">Play</button>');
+        }
+        function go2() {
+            i = parseInt(prompt('Nhập vị trí hàng'));
+            j = parseInt(prompt('Nhập vị trí cột'));
+            document.getElementById('invao').innerHTML = " ";
+            while(row[i][j]==="x"){
+                alert('Đánh trùng rồi!!');
+                i = parseInt(prompt('Nhập vị trí hàng'));
+                j = parseInt(prompt('Nhập vị trí cột'));
+            }
+            row[i][j] = "o";
+            for (i = 0; i < row.length; i++) {
+                for (j = 0; j < row[i].length; j++) {
+                    document.getElementById('invao').innerHTML += row[i][j]+"&nbsp;&nbsp;";
+                }
+                document.getElementById('invao').innerHTML += ('<br>');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

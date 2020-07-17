@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In day finonaci</title>
+</head>
+<body>
+    <script>
+        let x=parseInt(prompt('Nhập số 1 khởi đầu chuỗi'));
+        let y=parseInt(prompt('Nhập số 2 khởi đầu chuỗi'));
+        let z,i,n;
+        n=parseInt(prompt('Nhập độ dài chuỗi finonaci:'));
+        document.write('Chuỗi finonaci là:'+x+';'+y+';');
+        for (i=0;i<=n;i++){
+            z=x+y;
+            document.write(z+";");
+            x=y;
+            y=z;
+        }
+
+    </script>
+    
+</body>
+</html>

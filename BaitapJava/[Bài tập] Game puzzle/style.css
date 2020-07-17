@@ -1,78 +1,12 @@
-#class1{
-    margin-top: 0px;
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: url(anh1.PNG);
-    background-repeat: no-repeat;
-    z-index: 10;
+body{
+    margin: 0;
+    padding: 0;
 }
-#class2{
-    margin-top: 200px;
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background-color: darksalmon;
-    background: url(anh2.PNG);
-    background-repeat: no-repeat;
-    z-index: 10;
-
+#dear{
+    margin-top: -4px;
+    margin-left: 3px;
 }
-#class11{
-    margin-top: 0px;
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: url(hinh1.PNG);
-    background-repeat: no-repeat;
-    z-index: 9;
-
-}
-#class12{
-    margin-top: 200px;
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: url(hinh2.PNG);
-    background-repeat: no-repeat;
-    z-index: 9;
-}
-#class111{
-    margin-top: 0px;
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    
-    background: url(anh11111.PNG);
-    background-repeat: no-repeat;
-    z-index: 8;
-
-}
-#class112{
-    margin-top: 175px;
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: url(anh222222.PNG);
-    background-repeat: no-repeat;
-    z-index: 8;
-}
-#class1111{
-    margin-top: 0px;
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: url(imag1.PNG);
-    background-repeat: no-repeat;
-    z-index: 7;
-
-}
-#class1112{
-    margin-top: 167px;
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: url(imag2.PNG);
-    background-repeat: no-repeat;
-    z-index: 7;
+#last{
+    margin-top: -5px;
+    margin-left: 1px;
 }
