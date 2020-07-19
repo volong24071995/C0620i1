@@ -9,6 +9,7 @@
 
 <body>
     <script>
+        /*
         // nhap gia tri vao
         let n = prompt("Nhập vào chuỗi");
         // tao ham
@@ -42,13 +43,22 @@
                 }
             }
         }
-        // xuat ket qua
-        palindrome= palindrome(n);
-        if (palindrome) {
-            document.write(palindrome);
+        */
+        // nhap gia tri vao
+        let n = prompt("Nhập vào chuỗi"); 
+        // tao ham
+        function palindrome(n) {
+            let chuoi =n.split("").reverse().join("");
+            if (n === chuoi) return true;
+            return false;
         }
-        else document.write(palindrome);
-        
+        // xuat ket qua
+        let p = palindrome(n);
+        if (palindrome) {
+            document.write(p);
+        }
+        else document.write(p);
+
     </script>
 </body>
 

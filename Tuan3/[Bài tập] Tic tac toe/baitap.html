@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Tic tac toe</title>
+</head>
+
+<body>
+    <span id="invao"></span>
+    <script>
+        let i, j;
+        //in cai ban co
+        let row = new Array(5);
+        for (i = 0; i < 5; i++) {
+            row[i] = new Array(5);
+            for (j = 0; j < 5; j++) {
+                row[i][j] = ".";
+                document.getElementById('invao').innerHTML += row[i][j] + "&nbsp;&nbsp;";
+            }
+            document.getElementById('invao').innerHTML += ('<br>');
+        }
+        let dem = 0;
+        function go() {
+            let i = parseInt(prompt('Nhập vị trí hàng'));
+            while (i < 0 || i >= row.length) {
+                i = parseInt(prompt('Nhập vị trí hàng'));
+            }
+            let j = parseInt(prompt('Nhập vị trí cột'));
+            while (j < 0 || j >= row[i].length) {
+                j = parseInt(prompt('Nhập vị trí cột'));
+            }
+            if (row[i][j] === "x" || row[i][j] === "o") {
+                alert("O do danh roi")
+                return go();
+            }
+            if (dem % 2 ===0) {
+                row[i][j] = "x";
+                dem = dem + 1;
+            }
+            else {
+                row[i][j] = "o";
+                dem = dem + 1;
+            }
+
+            document.getElementById('invao').innerHTML = " ";
+            for (i = 0; i < row.length; i++) {
+                for (j = 0; j < row[i].length; j++) {
+                    document.getElementById('invao').innerHTML += row[i][j] + "&nbsp;&nbsp;";
+                }
+                document.getElementById('invao').innerHTML += ('<br>');
+            }
+        }
+        document.write('<button onclick="go()">Play</button>');
+
+    </script>
+
+</body>
+
+</html>

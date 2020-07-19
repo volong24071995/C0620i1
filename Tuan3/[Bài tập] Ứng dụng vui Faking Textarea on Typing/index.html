@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[*Bài tập] Ứng dụng vui Faking Textarea on Typing</title>
+</head>
+
+<body>
+    <textarea name="" id="Faking" cols="30" rows="10" onkeyup="moveSelection()"></textarea>
+    <script>
+         
+        function moveSelection(){
+            let kitu=["A","n","h"," ","Y","e","u"," ","E","m"];
+            let x=document.getElementById("Faking").value;
+            let abc="";
+            if(x.length>0){
+                for(let i=0;i<x.length;i++){
+                    abc+=kitu[i];
+                }
+                document.getElementById("Faking").value=abc;
+                if(x.length>kitu.length){
+                    document.getElementById("Faking").value="";
+                }
+            }
+            
+        }  
+    </script>
+
+</body>
+
+</html>
