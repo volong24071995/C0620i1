@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [3, 2, 1, 3];
+        function birthdayCakeCandles(ar) {
+            let newar = ar.sort(function (a, b) {
+                return a - b;
+            });
+            let dem = 0;
+            for (let i = 0; i < newar.length; i++) {
+                if (newar[newar.length - 1] === newar[i]) {
+                    dem += 1;
+                }
+            }
+            console.log(dem);
+        }
+        birthdayCakeCandles(arr);
+    </script>
+</body>
+
+</html>

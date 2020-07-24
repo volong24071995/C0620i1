@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Xây dựng lớp mô tả Temperature</title>
+</head>
+
+<body>
+    <script>
+        class Temperature {
+            constructor(c) {
+                this.c = c;
+            }
+            getc() {
+                return this.c;
+            }
+            getf() {
+                return "Độ f là " + (((this.c * 9) / 5) + 32);
+            }
+            getk() {
+                return "Độ k là " + (this.c + 273);
+            }
+            setc(c) {
+                this.c = c;
+            }
+        }
+        let t1 = +prompt("Nhập nhiệt độ");
+        let t2 = +prompt("Nhập nhiệt độ");
+        let temprature = new Temperature(t1);
+        let temprature1 = new Temperature(t2);
+        while (temprature.getc() < -273) {
+            t1 = +prompt("Nhiệt độ quá thấp nhập lại: ");
+            temprature.setc(t1);
+        }
+        while (temprature1.getc() < -273) {
+            t2 = +prompt("Nhiệt độ quá thấp nhập lại: ");
+            temprature1.setc(t2);
+        }
+        document.write(temprature.getf());
+        document.write("<br>")
+        document.write(temprature.getk());
+        document.write("<br>")
+        document.write(temprature1.getf());
+        document.write("<br>")
+        document.write(temprature1.getk())
+    </script>
+</body>
+
+</html>

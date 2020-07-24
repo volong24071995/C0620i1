@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] Xây dựng lớp mô phỏng sự hoạt động của đèn pin</title>
+</head>
+
+<body>
+    <p id="sangtoi"><img src="./Bongtat.PNG"></p>
+    <p id="pin"></p><br>
+    <button onclick="turon()">Turon</button><button onclick="turoff()">Turoff</button>
+</body>
+<script>
+    class Battery {
+        constructor(energy) {
+            this.energy = energy;
+        }
+
+        setenergy(energy) {
+            this.energy = energy;
+        }
+        getenergy() {
+            return this.energy;
+        }
+        decreaseEnergy() {
+            if (this.energy > 0) {
+                this.energy--;
+            }
+            else return "Hết pin: 0"
+        }
+    }
+    class FlashLamp {
+        constructor(battery, satus) {
+            this.satus = status;
+            this.battery = battery;
+        }
+        
+        getBaterry() {
+            return this.battery;
+        }
+
+        setBaterry(battery) {
+            this.battery=battery;
+        }
+
+        getBatteryinfo() {
+            return this.battery.getenergy();
+        }
+
+        light() {
+            if (this.satus) {
+                return '<img src="./Bongmo.PNG">';
+            }
+            else return '<img src="./Bongtat.PNG">';
+        }
+
+        setturnon() {
+            this.satus = true;
+        }
+
+        setturnoff() {
+            this.satus = false;
+        }
+    }
+    let battery1 = new Battery(20);
+    let flashLamp = new FlashLamp(battery1);
+    document.getElementById("pin").innerHTML = "Pin: " + battery1.getenergy();
+    let dem = 0
+    function turon() {
+        flashLamp.setturnon();
+        document.getElementById("sangtoi").innerHTML = flashLamp.light();
+        this.isOnInterval = setInterval(() => {
+            flashLamp.getBaterry().decreaseEnergy();
+            document.getElementById("pin").innerHTML = "Pin: " + flashLamp.getBatteryinfo()
+            if (flashLamp.getBatteryinfo() === 0) {
+                document.getElementById("sangtoi").innerHTML = '<img src="./Bongtat.PNG">'
+                alert("Hết pin");
+                clearInterval(this.isOnInterval);
+            }
+        }, 1000);
+
+        if (flashLamp.getBatteryinfo() === 0) {
+            document.getElementById("sangtoi").innerHTML = '<img src="./Bongtat.PNG">'
+            alert("Hết pin");
+            clearInterval(this.isOnInterval)
+        }
+    }
+    function turoff() {
+        flashLamp.setturnoff();
+        document.getElementById("sangtoi").innerHTML = flashLamp.light()
+        document.getElementById("pin").innerHTML = "Pin: " + flashLamp.getBatteryinfo()
+        clearInterval(this.isOnInterval);
+    }
+
+
+</script>
+
+</html>

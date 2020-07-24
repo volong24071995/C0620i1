@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="mycanvas" width="1500px" height="1000px" style="border: 2px soild red;"></canvas>
+    <script>
+        class Artchart {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+            getx(){
+                return this.x;
+            }
+            gety(){
+                return this.y;
+            }
+        }
+        function randomcolor() {
+            let red = Math.floor(Math.random() * 255);
+            let blue = Math.floor(Math.random() * 255);
+            let black = Math.floor(Math.random() * 255);
+            return "rgb(" + red + "," + blue + "," + black + ")";
+        }
+        function iloveu(){
+        let ctx = document.getElementById("mycanvas").getContext("2d");
+        let x=Math.random()*window.innerWidth;
+        let y=Math.random()*window.innerHeight;
+        let art=new Artchart(x,y)
+        let color=randomcolor();
+        ctx.fillStyle = color;
+        ctx.font = "30px Arial";
+        ctx.fillText("I <3 U", art.getx(),art.gety());
+        }
+
+        function abc(){
+            for(let i=0;i<30;i++){
+            iloveu()
+        } 
+        }
+        setInterval(function () {
+        var ctx = document.getElementById("mycanvas").getContext("2d");
+        ctx.clearRect(0, 0,1368,768);
+        abc()
+        },1000); 
+    </script>
+</body>
+
+</html>

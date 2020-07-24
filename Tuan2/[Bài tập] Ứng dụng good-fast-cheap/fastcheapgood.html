@@ -8,43 +8,6 @@
 </head>
 
 <body>
-  <!-- tim hieu them -->
-  <!-- <style>
-    .dich{
-      position: relative;
-      display:inline-block;
-      left: 0px;
-      right: 0px;
-      top: 0px;
-      bottom: 0px;
-      
-    }
-    }
-    .go {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-}
-.go:before {
-  position: absolute;
-  content: "";
-  height: 28px;
-  width: 28px;
-  left: 4px;
-  bottom: 4px;
-}
-.dich:checked+.go:before {
-  background-color: blue;
-}
-.dich:checked+.go:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-} -->
-
   <style>
     .switch {
       position: relative;
@@ -122,28 +85,40 @@
   <script>
     let on, off;
     function botton1() {
-      document.getElementById("input1").checked = true;
-      console.log(on);
-      if (on) {
+      if(document.getElementById("input1").checked&&document.getElementById("input2").checked){
         document.getElementById("input3").checked = false;
       }
-
+      if(document.getElementById("input1").checked==false){
+        document.getElementById("input3").checked = true;
+        document.getElementById("input2").checked=true;
+      }
+      if(document.getElementById("input1").checked==false&&document.getElementById("input2").checked==false){
+        document.getElementById("input3").checked = true;
+      }
     }
     function botton2() {
-      document.getElementById("input2").checked = true;
-      console.log(off)
-      if (off === false) {
-        document.getElementById("input1").checked = false;
-        on = true;
+      if(document.getElementById("input3").checked&&document.getElementById("input2").checked){
+      document.getElementById("input1").checked = false;
       }
+      if(document.getElementById("input1").checked&&document.getElementById("input2").checked){
+      document.getElementById("input3").checked = false;
+      }
+      if(document.getElementById("input2").checked==false){
+        document.getElementById("input1").checked=true;
+        document.getElementById("input3").checked=true;
+      }
+
+
     }
     function botton3() {
-      document.getElementById("input3").checked = true;
-      on = document.getElementById("input3").checked;
-      if (on) {
-        document.getElementById("input2").checked = false;
-        off = false;
+      if(document.getElementById("input3").checked&&document.getElementById("input1").checked){
+        document.getElementById("input2").checked=false;
       }
+      if(document.getElementById("input3").checked==false){
+        document.getElementById("input2").checked=true;
+        document.getElementById("input1").checked=true;
+      }
+      
     }
   </script>
 

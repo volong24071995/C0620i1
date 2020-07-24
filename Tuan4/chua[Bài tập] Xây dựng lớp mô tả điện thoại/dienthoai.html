@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Xây dựng lớp mô tả điện thoại</title>
+</head>
+
+<body>
+    <div>
+        <textarea name="" id="manghinhnokia" cols="30" rows="10"></textarea><br>
+        <select name="" id="1" oninput="kiemTra1(this);">
+            <option value="Menu">Menu</option>
+            <option value="Tnsend">Tin nhắn gửi </option>
+            <option value="Tnden">Tin nhắn đến</option>
+            <option value="Tnsoanthao">Tin soan thảo</option>
+        </select>
+    </div>
+    <span id="span1"></span>
+    <p id="text1">dsadsa</p>
+    <hr>
+    <div>
+        <textarea name="" id="manghinhiphone" cols="30" rows="10"></textarea><br>
+        <select name="" id="1" oninput="kiemTra2(this);">
+            <option value="Menu">Menu</option>
+            <option value="Tnsend">Tin nhắn gửi </option>
+            <option value="Tnden">Tin nhắn đến</option>
+            <option value="Tnsoanthao">Tin soan thảo</option>
+        </select>
+    </div>
+    <span id="span2"></span>
+    <p id="text2">dsadsa</p>
+    <script>
+
+        // tuong tac hai may
+        class Maydienthoai {
+            constructor(textsend, textnhap, textxem) {
+                this.textsend = textsend;
+                this.textnhap = textnhap;
+                this.textxem = textxem;
+            }
+            gettextsend() {
+                return this.textsend;
+            }
+            gettextnhap() {
+                return this.textnhap;
+            }
+            gettextxem() {
+                return this.textxem;
+            }
+        }
+        //Nokia
+        function kiemTra1(j) {
+            let x = j.value
+            if (x === "Tnden") {
+                document.getElementById("span1").innerHTML = "<button onclick='seen1()'>Xem</button>";
+            }
+            if (x === "Tnsend") {
+                document.getElementById("span1").innerHTML = "<button onclick='send1()'>Gửi</button>";
+            }
+            if (x === "Tnsoanthao") {
+                document.getElementById("span1").innerHTML = "<button onclick='save1()'>Lưu</button> <button onclick='xem1()'>Xem</button>";
+            }
+        }
+
+        // Iphone
+        function kiemTra2(i) {
+            let x = i.value
+            if (x === "Tnden") {
+                document.getElementById("span2").innerHTML = "<button onclick='seen2()'>Xem</button>";
+            }
+            if (x === "Tnsend") {
+                document.getElementById("span2").innerHTML = "<button onclick='send2()''>Gửi</button>";
+            }
+            if (x === "Tnsoanthao") {
+                document.getElementById("span2").innerHTML = "<button onclick='save2()'>Lưu</button>";
+            }
+        }
+        let arry1=[];
+        function send1() {
+            document.getElementById("manghinhnokia").value = ""
+            document.getElementById("manghinhiphone").value += "Tin nhắn đến ;"
+            document.getElementById("text2").innerHTML += ntin + " ;";
+        }
+        d = document.getElementById("text2").value;
+        document.getElementById("text2").value = "";
+        console.log(d);
+        function save1() {
+            let soanthao = document.getElementById("manghinhnokia").value;
+            document.getElementById("manghinhnokia").value = ""
+            document.getElementById("text1").value = soanthao;
+        }
+        a = document.getElementById("text1").value;
+        document.getElementById("text1").value = "";
+        seen1(b);
+        function seen1(text) {
+            document.getElementById("manghinhnokia").value = text;
+        }
+
+        function send2() {
+            let ntin2 = document.getElementById("manghinhiphone").value;
+            document.getElementById("manghinhiphone").value = ""
+            document.getElementById("manghinhnokia").value += "Tin nhắn đến ;"
+            document.getElementById("text1").value += ntin2 + " ;";
+        }
+        b = document.getElementById("text1").value;
+        document.getElementById("text1").value = "";
+
+        function save2() {
+            let soanthao2 = document.getElementById("manghinhiphone").value;
+            document.getElementById("manghinhiphone").value = ""
+            document.getElementById("text2").value = soanthao2;
+        }
+        c = document.getElementById("text2").value;
+        document.getElementById("text2").value = "";
+        seen2(d);
+        function seen2(teext) {
+            document.getElementById("manghinhiphone").value = teext;
+        }
+        let may2 = new Maydienthoai(c, d);
+        let may1 = new Maydienthoai(a, b)
+    </script>
+
+</body>
+
+</html>

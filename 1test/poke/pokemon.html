@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        display: inline-block;
+        text-align: left;
+    }
+</style>
+
+<body>
+    <div>
+        <p id="Pikachu"><img src="./electric.jpg" alt="Pikachu" style="width:200px;height: 200px;"></p>
+        <p id="poke1"></p>
+        <button onclick="attack1()">Attack</button>
+    </div>
+    <div>
+        <p id="Lidadon"><img src="./fire.png" alt="Lidadon" style="width:250px;height: 300px;"></p>
+        <p id="poke2"></p>
+        <button onclick="attack2()">Attack</button>
+    </div>
+    <script>
+        class Pokemon {
+            constructor(name, type, streng, deff) {
+                this.name = name;
+                this.type = type;
+                this.hp = 100;
+                this.streng = streng;
+                this.deff = deff;
+            }
+
+            getinforpoke() {
+                return "Tên: "+this.name +"<br> Hệ: "+ this.type + '<br> Máu: ' + this.hp + '<br> Sức mạnh: ' + this.streng + '<br> Phòng thủ: ' + this.deff;
+            }
+
+            getname() {
+                return this.name;
+            }
+
+            getdeff() {
+                return this.deff;
+            }
+
+            sethp(hp){
+                this.hp=0;
+            }
+            setdeff(deff){
+                this.deff=deff;
+            }
+
+            decresedeff() {
+                this.deff--;
+            }
+
+            attack(poke) {
+                if (poke.hp > 0) {
+                    let smts = Math.floor(Math.random() * this.streng);
+                    alert("suc manh cu danh " + smts);
+                    if (poke.deff >= smts) {
+                        if (smts > 0) {
+                            poke.decresedeff();
+                            alert("Giap bi ton thuong con: " + poke.getdeff()+" Mau con: " + poke.hp+" Manh qua");
+                        }
+                        else alert("Hụt rồi nhé");
+                    }
+                    else {
+                        if (poke.hp > 0) {
+                            let hpmat = smts - poke.deff;
+                            poke.hp = poke.hp - hpmat;
+                            poke.decresedeff();
+                            if(poke. getdeff()<=0){
+                                poke.setdeff(0);
+                            }
+                            alert("Mau doi thu con: " + poke.hp+ " Giap doi thu bi ton thuong con: " + poke.getdeff());
+                            if (poke.hp <= 0) {
+                                alert("Pokemon " + poke.getname() + " da chet")
+                                poke.setdeff(0);
+                                poke.sethp(0);
+                                if(poke. getname()==="Pikachu"){
+                                    document.getElementById("Pikachu").innerHTML="";
+                                }
+                                else document.getElementById("Lidadon").innerHTML="";
+                                return;
+                            }
+                            else {
+                                alert("No yeu roi");
+                            }
+                        }
+
+                    }
+
+                }
+                else {
+                    alert("Pokemon " + poke.getname() + " da chet")
+
+                }
+
+            }
+        }
+        // tao sm vs phong thu
+        let deff1 = Math.floor(Math.random() * 100);
+        let streng1 = Math.floor(Math.random() * 100);
+        console.log(streng1, deff1)
+        let deff2 = Math.floor(Math.random() * 100);
+        let streng2 = Math.floor(Math.random() * 100);
+        console.log(streng2, deff2)
+        let pokemon1 = new Pokemon("Pikachu", "electric", streng1, deff1);
+        let pokemon2 = new Pokemon("Lidadon", "fire", streng2, deff2);
+        // Hien thi poke
+        document.getElementById("poke1").innerHTML = pokemon1.getinforpoke();
+        document.getElementById("poke2").innerHTML = pokemon2.getinforpoke();
+        // tan cong
+        let check=true;
+        function attack1(){
+            if(check){
+            pokemon1.attack(pokemon2);
+            document.getElementById("poke2").innerHTML = pokemon2.getinforpoke();
+            }
+            check=false;
+        }
+        function attack2(){
+            if(!check){
+            pokemon2.attack(pokemon1);
+            document.getElementById("poke1").innerHTML = pokemon1.getinforpoke();
+            }
+            check=true;
+        }
+    </script>
+</body>
+
+</html>

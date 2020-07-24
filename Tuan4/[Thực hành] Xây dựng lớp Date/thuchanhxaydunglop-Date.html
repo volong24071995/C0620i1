@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] Xây dựng lớp Date</title>
+</head>
+
+<body>
+    <script>
+        function Date(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        this.setday = function (day) {
+            this.day = day;
+        }
+        this.setmonth = function (month) {
+            this.month = month;
+        }
+        this.setyear = function (year) {
+            this.year = year;
+        }
+        }
+        let date = new Date(9, 10, 2020);
+        date.setday(10);
+        date.setmonth(10);
+        date.setyear(2019);
+        document.write(date.day+"/"+date.month+"/"+date.year);
+    </script>
+</body>
+
+</html>

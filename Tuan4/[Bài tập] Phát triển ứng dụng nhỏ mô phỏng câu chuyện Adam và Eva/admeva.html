@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Phát triển ứng dụng nhỏ mô phỏng câu chuyện Adam và Eva</title>
+</head>
+
+<body>
+    <div id="adam"></div> <button onclick="eat1(human1.getName())">Eat</button>
+    <div id="eva"></div> <button onclick="eat2(human2.getName())">Eat</button>
+    <div id="tao"></div>
+
+    <script>
+        class Human {
+            constructor(name, gender, weight) {
+                this.name = name;
+                this.gender = gender;
+                this.weight = weight;
+         
+            }
+
+            getinfohuman() {
+                return this.name + ", " + this.gender + ", " + this.weight;
+            }
+
+            getName() {
+                return this.name;
+            }
+
+            setName() {
+                this.name = name;
+            }
+
+            getWeight() {
+                return this.weight;
+            }
+
+            setWeight() {
+                this.weight = weight;
+            }
+
+            getGender() {
+                return this.gender;
+            }
+
+            setGender() {
+                this.gender = gender;
+            }
+
+            eatapp(apple) {
+                if (this.checkApp(apple)==true){
+                    this.Apple=apple;
+                    this.Apple.appbian();
+                     this.weight++;
+                
+                }
+                
+                
+            }
+            checkApp(apple){
+                this.Apple=apple;
+                if(this.Apple.getApWeight()>0) return true;
+            }
+
+            humansay() {
+                if (this.gender === "male") {
+                    console.log("Ngon nhỉ?")
+                }
+                else console.log("Bình thường")
+            }
+        }
+
+        class Apple {
+            constructor(apweight) {
+                this.apweight = apweight;
+            }
+
+            getApweight() {
+                return this.apweight;
+            }
+
+            appbian() {
+                return this.apweight--;
+            }
+        }
+
+        let apple = new Apple(10);
+        let human1 = new Human("Adam", "male", 50);
+        let human2 = new Human("Eva", "female", 50);
+        document.getElementById("adam").innerHTML = human1.getinfohuman();
+        document.getElementById("eva").innerHTML = human2.getinfohuman();
+        document.getElementById("tao").innerHTML = "Quả táo nặng: " + apple.getApweight();
+        let x = true;
+        function eat1(namehuman) {
+            if (apple.getApweight() > 0) {
+                if (namehuman === human1.getName() && x === true) {
+                    human1.eatapp(apple);
+                    x = false;
+                    document.getElementById("adam").innerHTML = human1.getinfohuman();
+                    document.getElementById("tao").innerHTML = "Quả táo nặng: " + apple.getApweight();
+                    human1.humansay();
+                }
+            }
+            else alert("hết đồ ăn")
+
+        }
+        function eat2(namehuman) {
+            if (apple.getApweight() > 0) {
+                if (namehuman === human2.getName() && x === false) {
+                    human2.eatapp(apple);
+                    
+                    x = true;
+                }
+                document.getElementById("eva").innerHTML = human2.getinfohuman()
+                document.getElementById("tao").innerHTML = "Quả táo nặng: " + apple.getApweight();
+                human2.humansay();
+            }
+            else alert("hết đồ ăn")
+
+        }
+
+    </script>
+</body>
+
+</html>

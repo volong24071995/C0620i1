@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+    <canvas id="mycavas" width="700px" height="500px"  style="border:1px solid #d3d3d3;"></canvas>
+    <script>
+        function Rectangle(length,width){
+            this.length=length;
+            this.width=width;
+            this.dientich=function(){
+                return this.length *this.width;
+            }
+            this.chuvi=function(){
+                return (this.length+this.width)*2;
+            }
+        }
+        let length=+prompt("Nhập chiều dài hình chữ nhật");
+        let width=+prompt("Nhập chiều rộng hình chữ nhật");
+        let rectagle=new Rectangle(length,width);
+        let dientich=rectagle.dientich();
+        let chuvi=rectagle.chuvi();
+        document.write("<br>");
+        document.write("Diện tích hình chữ nhật là "+dientich);
+        document.write("<br>");
+        document.write("Chu vi hình chữ nhật là "+chuvi);
+        function painrectangle(){
+            let ctx=document.getElementById("mycavas").getContext("2d");
+            ctx.fillStyle="#ee1111"
+            ctx.fillRect(0,0,rectagle.length,rectagle.width);
+        }
+        painrectangle();
+    </script>
+</body>
+</html>
