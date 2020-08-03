@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kho vật tư y tế</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./csstex.css" />
+</head>
+
+<body>
+    <div class="divbody">
+        <form>
+            <div class="div1">
+                <div class="logo">
+                    <a href="./index.html"><img src="./img-logo.jpg" alt="logoyte"></a>
+                </div>
+                <div class="timkiem">
+                    <div class="search">
+                        <input id="timhang" type="search" placeholder="Tìm sản phẩm…">
+                    </div>
+                    <div class="click">
+                        <button class="fa fa-search" onclick="search()"></button>
+                    </div><br>
+                    <span>
+                    Gợi ý tìm kiếm: Dung dịch sát khuẩn tay, test nước tiểu ...
+                </span>
+                </div>
+                <div>
+                    <div class="lienlac">
+                        Gọi mua hàng:<text> 0868 963 638</text>
+                    </div><br>
+                    <div class="giaohang">
+                        <i class="fa fa-truck" style="font-size:25px;"></i> Giao hàng trên toàn quốc<br>
+                        <i class="fa fa-archive" style="font-size:25px;"></i> Miễn phí đổi trả<br>
+                        <i class="fa fa-dollar" style="font-size:25px;"></i> Thanh toán khi nhận hàng
+                    </div>
+                </div>
+            </div>
+            <div class="div2">
+                <div style="width: 110px;">
+                    <a href="./index.html">Trang chủ</a>
+                </div>
+                <div style="width: 110px;">
+                    <a href="./gioithieu.html"> Giới thiệu</a></div>
+                <div style="width: 125px;">
+                    <a href="./khachang.html"> Khách hàng</a>
+                </div>
+                <div style="width: 190px;" class="menu">
+                    <a href="#">Hỗ trợ khách hàng <i class="fa fa-sort-down"></i></a>
+                    <div class="submenu" id="customer">
+                        <div>
+                            <a href="./huongdanmuahang.html">
+                                hướng dẫn mua hàng
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                hướng dẫn thanh toán
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 220px;" class="menu">
+                    <a href="#">Chính sách ngân hàng <i class="fa fa-sort-down"></i></a>
+                    <div class="submenu" id="bank">
+                        <div>
+                            <a href="./chinhsachgiaonhan.html">chính sách giao nhận</a>
+                        </div>
+                        <div>
+                            <a href="#">chính sách đổi trả</a>
+                        </div>
+                        <div>
+                            <a href="#">chính sách bảo hành</a>
+                        </div>
+                        <div>
+                            <a href="#">cam kết bán hàng</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 90px;">
+                    <a href="./liehe.html">Liên hệ</a>
+                </div>
+                <div style="width: 120px;" class="menu">
+                    <a href="#">Góc tư vấn <i class="fa fa-sort-down"></i></a>
+                    <div class="submenu" id="advisory">
+                        <div>
+                            <a href="./goctuvansp.html">tư vấn giới thiệu sản phẩm</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 120px;">
+                    <a href="#" class="fa fa-cart-plus"> Giỏ hàng</a>
+                </div>
+            </div>
+            <div class="div3" id="slider">
+                <img class="mySlides" src="./slidershow/img1.GIF">
+                <img class="mySlides" src="./slidershow/img2.GIF">
+                <img class="mySlides" src="./slidershow/img3.GIF">
+                <img class="mySlides" src="./slidershow/img4.jpg">
+                <img class="mySlides" src="./slidershow/img5.jpg">
+            </div>
+            <div class="div4-5">
+                <div class="div4">
+                    <h2>
+                        <i class="fa fa-align-justify" style="size: 32px;color: red;"></i> <text>Danh mục sản phẩm</text>
+                    </h2>
+                    <ul style="list-style-type: none;">
+                        <div class="div4-1">
+                            <li><i class="fa fa-angle-right"></i><a href="#">Dây, băng,gạc phẫu thuật</a></li>
+                            <li><i class="fa fa-angle-right"></i></i><a href="#">Kim luồn, kim gây tê và vật tư gmhs,
+                                cấp cứu</a> </li>
+                            <li><i class="fa fa-angle-right"></i></i><a href="#">Hô hấp </a></li>
+                            <li><i class="fa fa-angle-right"></i><a href="#">Phẩu thuật điều trị khác</a> </li>
+                            <li><i class="fa fa-angle-right"></i><a href="#">Nhi, sản phụ khoa</a> </li>
+                            <li><i class="fa fa-angle-right"></i><a href="#">Dụng cụ y tế inox</a> </li>
+                            <li><i class="fa fa-angle-right"></i><a href="#">Tiêm, truyền dich</a> </li>
+                            <li><i class="fa fa-angle-right"></i><a href="#">Xét nghiệm chung</a> </li>
+                            <li><i class="fa fa-angle-right"></i><a href="#">Ống nghiệm, kim lấy mẫu </a></li>
+                            <li><i class="fa fa-angle-right"></i><a href="#">Test nhanh chuẩn đoán</a> </li>
+                            <li><i class="fa fa-angle-right"></i><a href="#">Chuẩn đoán hình ảnh</a></li>
+                            <li><i class="fa fa-angle-right"></i><a href="#">Cá nhân, gia đình</a> </li>
+                            <li><i class="fa fa-angle-right"></i><a href="#">Khử khuẩn tiêt trùng</a> </li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="div5" id="result">
+                    <div class="div5-1">
+                        <h2>
+                            <i class="fa fa-stethoscope" style="size: 32px;color: red;"></i> <text>Sản phẩm mới</text>
+                        </h2>
+                        <div class="product" id="newproduct">
+
+                        </div>
+                    </div>
+                    <div class="div5-2">
+                        <h2>
+                            <i class="fa fa-stethoscope" style="size: 32px;color: red;"></i> <text> Sản phẩm nổi
+                                bật</text>
+                        </h2>
+                        <div class="product" id="hotproducts">
+
+                        </div>
+                    </div>
+                    <div class="div5-3">
+                        <h2>
+                            <i class="fa fa-stethoscope" style="size: 32px;color: red;"></i> <text>Sản phẩm khuyến
+                                mại</text>
+                        </h2>
+                        <div class="product" id="hotproducts">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="div6">
+                    <p class="distributor">Nhà phân phối vật tư y tế hàng đầu việt nam</p>
+                    <p class="depot">Kho vật tư y tế hiện đang phân phối các thiết bị, vật tư y tế chính hãng của các nhà sản xuất trong và ngoài nước</p>
+                </div>
+                <div class="div7">
+                    <marquee scrollamount="10" direction="left" loop="50" scrolldelay="0" onmouseover="this.stop()" onmouseout="this.start()">
+                        <div id="div7-1">
+                        </div>
+                    </marquee>
+                </div>
+                <div class="div8">
+                    <div class="div8-1">
+                        <i class="fa fa-truck" style="font-size:32px;color:red"></i>
+                        <div class="text">
+                            Chính sách giao hàng
+                        </div>
+                        <div class="text1">
+                            Nhận hàng và thanh toán tại nhà
+                        </div>
+                    </div>
+                    <div class="div8-1">
+                        <i class="fa fa-refresh" style="font-size:32px;color:red"></i>
+                        <div class="text">
+                            Đổi trả dễ dang
+                        </div>
+                        <div class="text1">
+                            Dùng thử trong vòng ba ngày
+                        </div>
+                    </div>
+                    <div class="div8-1">
+                        <i class="fa fa-credit-card" style="font-size:32px;color:red"></i>
+                        <div class="text">
+                            Thanh toán tiện lợi
+                        </div>
+                        <div class="text1">
+                            Trả tiền mặt,CK,trả góp 0%
+                        </div>
+                    </div>
+                    <div class="div8-1">
+                        <i class="fa fa-comments" style="font-size:32px;color:red"></i>
+                        <div class="text">
+                            Hỗ trợ nhiệt tình
+                        </div>
+                        <div class="text1">
+                            Tư vấn, giải đáp mọi thắc mắc
+                        </div>
+                    </div>
+                </div>
+                <div class="lienhe-fanpage">
+                    <div class="lienhe">
+                        <h3><i class="fa fa-desktop" style="color: rgb(14, 58, 190);"></i> Liên hệ</h3>
+                        <strong>Kho vật tư y tế</strong>
+                        <p>Phòng 503, tòa N5D, KĐT Trung Hòa Nhân Chính, Thanh Xuân, Hà Nội</p>
+                        <p>GPĐKKD số 0107651607 do Sở KHĐT Tp.Hà Nội cấp ngày 30/11/2016</p>
+                        <p>ĐT: 0862 669 638 – 0868 963 638</p>
+                        <p>Email: <a href="mailto:khovattuyte@gmail.com">khovattuyte@gmail.com</a></p>
+                        <p> &copy; 2020 Công Ty Cổ đầu tư DSC Việt Nam</p>
+                    </div>
+                    <div class="fanpage">
+                        <h3><i class="fa fa-google-plus" style="color: rgb(14, 58, 190);"></i> Fanpage</h3>
+                        <div class="fanpage1">
+                            <div class="facebook">
+                                <div class="facebook1">
+                                    <div>
+                                        <a href="#"><img src="./img-chuthap.jpg"></a>
+                                    </div>
+                                    <div class="facebook-1">
+                                        <div><a href="">Kho vật tư y tế</a></div>
+                                        <div>1.063 lượt thích</div>
+                                    </div>
+                                </div>
+                                <div class="facebook2">
+                                    <div class="fanpage1-1">
+                                        <i class="fa fa-facebook-official" style="color: rgb(14, 58, 190);"></i>
+                                        <a href="#">Thích trang</a>
+                                    </div>
+                                    <div class="fanpage1-2">
+                                        <i class="fa fa-envelope" style="color: rgb(87, 83, 83);"></i>
+                                        <a href="#">Liên hệ với chúng tôi</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <span>
+
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="./jstest.js"></script>
+
+</html>

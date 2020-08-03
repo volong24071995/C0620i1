@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>khach-hang</title>
+    <link rel="stylesheet" href="./csstex.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="divbody">
+        <form>
+            <div class="div1">
+                <div class="logo">
+                    <a href="./index.html"><img src="./img-logo.jpg" alt="logoyte"></a>
+                </div>
+                <div class="timkiem">
+                    <div class="search">
+                        <input id="timhang" type="search" placeholder="Tìm sản phẩm…">
+                    </div>
+                    <div class="click">
+                        <button class="fa fa-search" onclick="search()"></button>
+                    </div><br>
+                    <span>
+                    Gợi ý tìm kiếm: Dung dịch sát khuẩn tay, test nước tiểu ...
+                </span>
+                </div>
+                <div>
+                    <div class="lienlac">
+                        Gọi mua hàng:<text> 0868 963 638</text>
+                    </div><br>
+                    <div class="giaohang">
+                        <i class="fa fa-truck" style="font-size:25px;"></i> Giao hàng trên toàn quốc<br>
+                        <i class="fa fa-archive" style="font-size:25px;"></i> Miễn phí đổi trả<br>
+                        <i class="fa fa-dollar" style="font-size:25px;"></i> Thanh toán khi nhận hàng
+                    </div>
+                </div>
+            </div>
+            <div class="div2">
+                <div style="width: 110px;">
+                    <a href="./index.html">Trang chủ</a>
+                </div>
+                <div style="width: 110px;">
+                    <a href="./gioithieu.html"> Giới thiệu</a></div>
+                <div style="width: 125px;">
+                    <a href="./khachang.html"> Khách hàng</a>
+                </div>
+                <div style="width: 190px;" class="menu">
+                    <a href="#">Hỗ trợ khách hàng <i class="fa fa-sort-down"></i></a>
+                    <div class="submenu" id="customer">
+                        <div>
+                            <a href="./huongdanmuahang.html">
+                                hướng dẫn mua hàng
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                hướng dẫn thanh toán
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 220px;" class="menu">
+                    <a href="#">Chính sách ngân hàng <i class="fa fa-sort-down"></i></a>
+                    <div class="submenu" id="bank">
+                        <div>
+                            <a href="./chinhsachgiaonhan.html">chính sách giao nhận</a>
+                        </div>
+                        <div>
+                            <a href="#">chính sách đổi trả</a>
+                        </div>
+                        <div>
+                            <a href="#">chính sách bảo hành</a>
+                        </div>
+                        <div>
+                            <a href="#">cam kết bán hàng</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 90px;">
+                    <a href="./liehe.html">Liên hệ</a>
+                </div>
+                <div style="width: 120px;" class="menu">
+                    <a href="#">Góc tư vấn <i class="fa fa-sort-down"></i></a>
+                    <div class="submenu" id="advisory">
+                        <div>
+                            <a href="./goctuvansp.html">tư vấn giới thiệu sản phẩm</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 120px;">
+                    <a href="#" class="fa fa-cart-plus"> Giỏ hàng</a>
+                </div>
+            </div>
+            <div class="khachhang" id="duanbig">
+            </div>
+            <hr>
+            <div class="footer">
+                <div class="lienhe-fanpage">
+                    <div class="lienhe">
+                        <h3><i class="fa fa-desktop" style="color: rgb(14, 58, 190);"></i> Liên hệ</h3>
+                        <strong>Kho vật tư y tế</strong>
+                        <p>Phòng 503, tòa N5D, KĐT Trung Hòa Nhân Chính, Thanh Xuân, Hà Nội</p>
+                        <p>GPĐKKD số 0107651607 do Sở KHĐT Tp.Hà Nội cấp ngày 30/11/2016</p>
+                        <p>ĐT: 0862 669 638 – 0868 963 638</p>
+                        <p>Email: <a href="mailto:khovattuyte@gmail.com">khovattuyte@gmail.com</a></p>
+                        <p> &copy; 2020 Công Ty Cổ đầu tư DSC Việt Nam</p>
+                    </div>
+                    <div class="fanpage">
+                        <h3><i class="fa fa-google-plus" style="color: rgb(14, 58, 190);"></i> Fanpage</h3>
+                        <div class="fanpage1">
+                            <div class="facebook">
+                                <div class="facebook1">
+                                    <div>
+                                        <a href="#"><img src="./img-chuthap.jpg"></a>
+                                    </div>
+                                    <div class="facebook-1">
+                                        <div><a href="">Kho vật tư y tế</a></div>
+                                        <div>1.063 lượt thích</div>
+                                    </div>
+                                </div>
+                                <div class="facebook2">
+                                    <div class="fanpage1-1">
+                                        <i class="fa fa-facebook-official" style="color: rgb(14, 58, 190);"></i>
+                                        <a href="#">Thích trang</a>
+                                    </div>
+                                    <div class="fanpage1-2">
+                                        <i class="fa fa-envelope" style="color: rgb(87, 83, 83);"></i>
+                                        <a href="#">Liên hệ với chúng tôi</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <span>
+
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    // in khach hang
+    let duan = ["DỰ ÁN BỆNH VIỆN ĐA KHOA TỈNH HÀ GIANG", "DỰ ÁN TẬP ĐOÀN TH TRUE MILK", "DỰ ÁN VIỆN THẨM MỸ HANA", "DỰ ÁN BỆNH VIỆN ĐA KHOA TỈNH BẮC GIANG", "DỰ ÁN BỆNH VIỆN ĐA KHOA PHƯƠNG ĐÔNG", "BỆNH VIỆN TRUNG ƯƠNG QUÂN ĐỘI 108"];
+    let html4 = "";
+    let duanimg = ["hagiang.jpg", "trumilk.jpg", "hana.jpg", "bacgiang.jpg", "phuongdong.jpg", "qd108.jpg"]
+    let
+        c1 = "DSC Việt Nam rất tự hào khi đã triển khai thành công các mặt hàng vật tư y tế như: Kim luồn tĩnh mạch Smiths Medical, ống nghiệm chân không TUD tới bệnh viện và nhận được sự phản hồi tích cực từ các y bác sĩ.",
+        c2 = "Tháng 02/2020 vừa qua DSC Việt Nam đã ký hợp đồng với Công ty cổ phần sữa TH và giao thành công đơn hàng kim luồn tĩnh mạch Smiths Medical – Jelco Seriva Straight",
+        c3 = "Trong những năm qua, DSC Việt Nam đã và đang cung cấp Ống nghiệm lấy máu chân không TUD và Kim lấy máu chân không TUD cho Viện, thay thế hoàn toàn các sản phẩm ống nghiệm thông thường.",
+        c4 = "Hiện nay, DSC Việt Nam đã triển khai thành công các mặt hàng vật tư y tế như: Kim luồn tĩnh mạch Smiths Medical, ống nghiệm chân không TUD…tới các y bác sĩ tại bệnh viện và được phản hồi rất tốt về chất lượng sản phẩm.",
+        c5 = "Tại bệnh viện đa khoa Phương Đông, DSC Việt Nam đã triển khai tư vấn dịch vụ, hệ thống trang thiết bị y tế và cung cấp vật tư, hóa chất y tế cho dự án của Viện. Hai năm vừa qua, chúng tôi tự hào là đối tác cung cấp dịch vụ, trang thiết bị, vật tư y tế cho bệnh viện.",
+        c6 = "Bệnh viện Trung ương Quân đội 108 là bệnh viện Đa khoa, Chuyên khoa sâu, tuyến cuối của ngành Quân y và là Bệnh viện hạng đặc biệt của Quốc gia với chức năng nhiệm vụ: Khám, cấp cứu, thu dung điều trị cho các đối tượng bệnh nhân: quân nhân tại chức, bảo hiểm quân đội và nhân dân nhân thuộc diện thu một phần viện phí";
+    let infoduan = [c1, c2, c3, c4, c5, c6];
+    for (let i = 0; i < duan.length; i++) {
+        html4 +=
+            `<div class="infoduan">
+                <img src="./duan/${duanimg[i]}"><br>
+                <a href="#">${duan[i]}</a>
+                <p>${infoduan[i]}</p>
+            </div>`;
+    }
+    document.getElementById("duanbig").innerHTML = html4;
+</script>
+
+</html>
