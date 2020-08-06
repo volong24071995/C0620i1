@@ -23,7 +23,7 @@ public class PrintImg {
                             System.out.print("*");
                         }
                         System.out.println("");
-                    }
+                }
                     break;
                 case 2:
                     System.out.println("Enter your choice triangle:");

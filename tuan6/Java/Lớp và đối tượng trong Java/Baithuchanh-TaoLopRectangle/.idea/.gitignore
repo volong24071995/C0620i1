@@ -2,7 +2,7 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
-/../../../../../:\Java\Lớp và đối tượng trong Java\Baithuchanh-TaoLopRectangle\.idea/dataSources/
+/../../../../:\Java\Baithuchanh-TaoLopRectangle\.idea/dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/

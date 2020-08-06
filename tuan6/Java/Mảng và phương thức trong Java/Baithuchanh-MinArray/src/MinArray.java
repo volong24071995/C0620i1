@@ -17,8 +17,8 @@ public class MinArray {
         int min =valuemin(array);
         System.out.println("");
         System.out.println("Value array min is: "+min);
-    }
-    public static int valuemin(int a[]){
+        }
+        public static int valuemin(int a[]){
         int min=a[0];
         for (int i=0;i<a.length;i++){
             if(min>a[i]){

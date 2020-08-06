@@ -2,7 +2,7 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
-/../../../../../:\Java\Lớp và đối tượng trong Java\Baitpa-QuadraticEquation\.idea/dataSources/
+/../../../../:\Java\Baitpa-QuadraticEquation\.idea/dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
