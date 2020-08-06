@@ -12,6 +12,25 @@ public class MinArray {
         }
         int min1 = array[0];
         int min2;
+//        for (int i = 1; i < size; i++) {
+//            if(min1> array[i]){
+//                min2 = min1;
+//                min1 = array[i];
+//            }
+//
+//        }
+//
+//        if(min1 == array[0]){
+//            min2= array[1];
+//            for (int i = 2; i < size; i++) {
+//                if(min2> array[i]){
+//                    min2 = array[i];
+//                }
+//
+//            }
+//        }
+//        System.out.println("Min 2 la "+min2);
+//    }
         for (int i = 0; i < size; i++) {
             if (min1 != array[i]) {
                 min2 = array[i];
