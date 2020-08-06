@@ -2,7 +2,7 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
-/../../../../:\Java\Baithuchanh-MaxArray\.idea/dataSources/
+/../../../../../:\Java\Mảng và phương thức trong Java\Baithuchanh-MaxArray\.idea/dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/

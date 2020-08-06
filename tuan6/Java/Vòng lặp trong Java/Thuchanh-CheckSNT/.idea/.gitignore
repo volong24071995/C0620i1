@@ -2,7 +2,7 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
-/../../../../:\Java\Thuchanh-CheckSNT\.idea/dataSources/
+/../../../../../:\Java\Vòng lặp trong Java\Thuchanh-CheckSNT\.idea/dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/

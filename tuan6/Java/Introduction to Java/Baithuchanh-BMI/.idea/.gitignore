@@ -2,7 +2,7 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
-/../../../../:\Java\Baithuchanh-BMI\.idea/dataSources/
+/../../../../../:\Java\Introduction to Java\Baithuchanh-BMI\.idea/dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/

@@ -2,7 +2,7 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
-/../../../../:\Java\Baitap-NumberString\.idea/dataSources/
+/../../../../../:\Java\Introduction to Java\Baitap-NumberString\.idea/dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/

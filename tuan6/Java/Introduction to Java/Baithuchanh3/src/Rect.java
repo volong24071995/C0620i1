@@ -12,7 +12,7 @@ public class Rect {
 
         System.out.println("Enter height: ");
         height = scanner.nextFloat();
-         float rect=width*height;
+        float rect=width*height;
         System.out.println("Area rect is: "+ rect);
     }
 }

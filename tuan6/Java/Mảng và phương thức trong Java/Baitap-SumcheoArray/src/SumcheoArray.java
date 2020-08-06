@@ -6,8 +6,8 @@ public class SumcheoArray {
         System.out.println("Enter size: ");
         int size=scanner.nextInt();
         while (size>20||size<0){
-                System.out.println("Enter size again: ");
-                size=scanner.nextInt();
+            System.out.println("Enter size again: ");
+            size=scanner.nextInt();
         }
         int[][] array=new int[size][size];
         for (int i=0;i<size;i++){

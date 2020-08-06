@@ -2,7 +2,7 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
-/../../../../:\Java\Baitap-MinArray\.idea/dataSources/
+/../../../../../:\Java\Mảng và phương thức trong Java\Baitap-MinArray\.idea/dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
