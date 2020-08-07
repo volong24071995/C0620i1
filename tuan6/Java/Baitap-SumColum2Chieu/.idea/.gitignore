@@ -2,7 +2,7 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
-/../../../../../:\Java\Mảng và phương thức trong Java\Baitap-SumColum2Chieu\.idea/dataSources/
+/../../../../:\Java\Baitap-SumColum2Chieu\.idea/dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
