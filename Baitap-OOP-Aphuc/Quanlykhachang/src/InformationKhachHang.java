@@ -65,7 +65,4 @@ public class InformationKhachHang {
     public void setTotaloder(int totaloder) {
         this.totaloder = totaloder;
     }
-    public InformationKhachHang[] getInformation(InformationKhachHang[] information,InformationKhachHang newInformation){
-        return information;
-    }
 }
