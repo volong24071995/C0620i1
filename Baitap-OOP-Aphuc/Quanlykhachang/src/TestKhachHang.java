@@ -14,7 +14,7 @@ public class TestKhachHang {
         String name,address,email,phoneNumber;
         boolean gender;
         int toltaloder,chose;
-        ArrayList<InformationKhachHang> informationKhachHangs = new ArrayList<InformationKhachHang>();
+        ArrayList<CustomerManagement> informationKhachHangs = new ArrayList<CustomerManagement>();
         boolean check = false;
         while (true){
             System.out.println("Lua chon:");
@@ -33,7 +33,7 @@ public class TestKhachHang {
                     gender = scanner.nextBoolean();
                     System.out.println("Tong don cua khach hang:");
                     toltaloder = scanner.nextInt();
-                    InformationKhachHang newInformation = new InformationKhachHang(name, address, phoneNumber, email, gender, toltaloder);
+                    CustomerManagement newInformation = new CustomerManagement(name, address, phoneNumber, email, gender, toltaloder);
                     informationKhachHangs.add(newInformation);
                     break;
                 case 4:

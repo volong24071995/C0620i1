@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class Screen {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
-        Atm person=new Atm("Nguyễn Văn Lâm",1200000);
+        Card person=new Card("Nguyễn Văn Lâm",1200000);
+        Atm atm=new Atm(person);
         System.out.println("Ngan hang ABC kinh chao Quy khach: "+person.getAccount_name());
         System.out.println("Menu:");
         System.out.println("\t1.Nhan phim A de kiem tra tai khoan");
@@ -21,21 +22,21 @@ public class Screen {
             switch (chose){
                 case "A":
                     count_error=0;
-                    person.checkCard();
+                    atm.checkCard();
                     break;
                 case "D":
                     count_error=0;
-                    person.sendMoneyToCard();
+                    atm.sendMoneyToCard();
                     break;
                 case "W":
-                    person.withdrawal();
+                    atm.withdrawal();
                     break;
                 case "H":
                     count_error=0;
-                    person.transactionHistory();
+                    atm.transactionHistoryTK();
                     break;
                 case "X":
-                   person.exit();
+                    atm.exit();
                 default:
                     count_error++;
                     if(count_error==3){
