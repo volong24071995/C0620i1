@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Atm/Atm.iml" filepath="$PROJECT_DIR$/Atm/Atm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Baitap-OOP-Aphuc.iml" filepath="$PROJECT_DIR$/.idea/Baitap-OOP-Aphuc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Quanlykhachang/Quanlykhachang.iml" filepath="$PROJECT_DIR$/Quanlykhachang/Quanlykhachang.iml" />
+    </modules>
+  </component>
+</project>
