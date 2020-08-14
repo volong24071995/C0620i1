@@ -27,22 +27,38 @@ public class CustomerManagement {
         }
     }
 
-//    tim theo sdt ko odder
-    public void search(String phoneNumber) {
+    public boolean searchPhone(String phoneNumber) {
+        boolean check=false;
         for (int i = 0; i < listOfCustomers.size(); i++) {
             if (phoneNumber.equals(listOfCustomers.get(i).getPhoneNumber())) {
-                System.out.println(listOfCustomers.get(i).toString());
+                check=true;
                 break;
             }
         }
+        return check;
+    }
+//    tim theo sdt ko odder
+    public void search(String phoneNumber) {
+        if (searchPhone(phoneNumber)){
+            for (int i = 0; i < listOfCustomers.size(); i++) {
+                if (phoneNumber.equals(listOfCustomers.get(i).getPhoneNumber())) {
+                    System.out.println(listOfCustomers.get(i).toString());
+                    break;
+                }
+            }
+        }else System.out.println("khong co khach hang");
+
     }
 //        tim theo sdt co odder
     public void searchHasOdder(String phoneNumber){
-        for (int i = 0; i < listOfCustomers.size(); i++) {
-            if (phoneNumber.equals(listOfCustomers.get(i).getPhoneNumber())) {
-                System.out.println(listOfCustomers.get(i).toString()+" tong don hang "+listOfCustomers.get(i).getTotalOder());
+        if (searchPhone(phoneNumber)){
+            for (int i = 0; i < listOfCustomers.size(); i++) {
+                if (phoneNumber.equals(listOfCustomers.get(i).getPhoneNumber())) {
+                    System.out.println(listOfCustomers.get(i).toString()+" tong don hang "+listOfCustomers.get(i).getTotalOder());
+                    break;
+                }
             }
-        }
+        }else System.out.println("khong co khach hang");
     }
 
     public void allDisplay(){
