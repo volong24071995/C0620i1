@@ -69,14 +69,18 @@ public class CustomerManagement {
     }
 
     public void addOrder(String phoneNumber) {
-        for (int i = 0; i < listOfCustomers.size(); i++) {
-            if (phoneNumber.equals(listOfCustomers.get(i).getPhoneNumber())) {
-                listOfCustomers.get(i).setTotalOder(listOfCustomers.get(i).getTotalOder() + 1);
-                System.out.println(listOfCustomers.get(i).toString()+" tong don hang "+listOfCustomers.get(i).getTotalOder());
+        if (searchPhone(phoneNumber)){
+            for (int i = 0; i < listOfCustomers.size(); i++) {
+                if (phoneNumber.equals(listOfCustomers.get(i).getPhoneNumber())) {
+                    listOfCustomers.get(i).setTotalOder(listOfCustomers.get(i).getTotalOder() + 1);
+                    System.out.println(listOfCustomers.get(i).toString()+" tong don hang "+listOfCustomers.get(i).getTotalOder());
+                }
             }
-        }
+        }else System.out.println("khong co khach hang");
+
     }
     public void exit(){
+        System.out.println("He thong Quan ly khach hang vua shutdown.");
         System.exit(0);
     }
 }
