@@ -33,7 +33,7 @@ public class CustomerManagement {
             if (phoneNumber.equals(listOfCustomers.get(i).getPhoneNumber())) {
                 check=true;
                 break;
-            }
+            }else check =false;
         }
         return check;
     }
@@ -77,7 +77,6 @@ public class CustomerManagement {
                 }
             }
         }else System.out.println("khong co khach hang");
-
     }
     public void exit(){
         System.out.println("He thong Quan ly khach hang vua shutdown.");

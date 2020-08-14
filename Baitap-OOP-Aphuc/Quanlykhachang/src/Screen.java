@@ -18,13 +18,13 @@ public class Screen {
     }
     public static void addNewCustomer(){
         System.out.println("Nhập tên:");
-        name = scanner.nextLine();
+        name = scanner.next();
         System.out.println("Nhập dia chi:");
-         address = scanner.nextLine();
+         address = scanner.next();
         System.out.println("Nhap email:");
-         email = scanner.nextLine();
+         email = scanner.next();
         System.out.println("Nhap sdt:");
-         phoneNumber = scanner.nextLine();
+         phoneNumber = scanner.next();
         System.out.println("Nhap gioi tinh:");
          gender = scanner.nextBoolean();
         customerManagement.addCustomer(name,address,email,phoneNumber,gender,totalOder);
@@ -32,7 +32,7 @@ public class Screen {
 //    Search sdt ko co odder
     public static void searchCustomer(){
         System.out.println("Nhap sdt khach hang:");
-        phoneNumber = scanner.nextLine();
+        phoneNumber = scanner.next();
         System.out.println("Hẹ thong dang tim kiem");
         System.out.println("Ket qua:");
         customerManagement.search(phoneNumber);
@@ -40,7 +40,7 @@ public class Screen {
 //    Search sdt co odder
     public static void searchCustomerHasOder(){
     System.out.println("Nhap sdt khach hang:");
-    phoneNumber = scanner.nextLine();
+    phoneNumber = scanner.next();
     customerManagement.searchHasOdder(phoneNumber);
 }
 
@@ -51,7 +51,7 @@ public class Screen {
 // them odder
     public static void addOdder(){
         System.out.println("Nhap sdt khach hang:");
-        phoneNumber = scanner.nextLine();
+        phoneNumber = scanner.next();
         customerManagement.addOrder(phoneNumber);
     }
     public static void main(String[] args) {
@@ -59,7 +59,7 @@ public class Screen {
         String chose;
         while (true){
             System.out.println("Lua chon:");
-            chose=scanner.nextLine();
+            chose=scanner.next();
             switch (chose) {
                 case "1":
                     Screen.addNewCustomer();
