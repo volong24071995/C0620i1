@@ -1,75 +1,66 @@
 import java.util.Scanner;
-
+import java.util.ArrayList;
 public class CustomerManagement {
-    private String name;
-    private  String address;
-    private String phoneNumber;
-    private String email;
-    private boolean gender;
-    private int totaloder;
+    private ArrayList<Customer> listOfCustomers = new ArrayList<Customer>();
 
-    public CustomerManagement(String name, String address, String phoneNumber, String email, boolean gender, int totaloder) {
-        this.name = name;
-        this.address = address;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-        this.gender = gender;
-        this.totaloder = totaloder;
+//tim theo customer
+    public boolean checkInformation(Customer customer){
+        boolean check=false;
+        for (int i=0;i<listOfCustomers.size();i++){
+            if (customer.getEmail().equals(listOfCustomers.get(i).getEmail()) && customer.getPhoneNumber().equals(listOfCustomers.get(i).getPhoneNumber())){
+                check= true;
+                break;
+            }
+        }
+        return check;
     }
 
-    public CustomerManagement() {
+    public boolean addCustomer(String name,String address,String email,String phoneNumber,boolean gender,int totalOder){
+        Customer customer=new Customer(name,address,email,phoneNumber,gender);
+        if (checkInformation(customer)){
+            System.out.println("Khach hang da ton tai.He thong vua update thong tin");
+            return false;
+        }else  {
+            listOfCustomers.add(customer);
+            System.out.println("Ban vua them moi khach hang "+customer.getName()+" thanh cong ");
+            return true;
+        }
     }
 
-    public String getName() {
-        return name;
+//    tim theo sdt ko odder
+    public void search(String phoneNumber) {
+        for (int i = 0; i < listOfCustomers.size(); i++) {
+            if (phoneNumber.equals(listOfCustomers.get(i).getPhoneNumber())) {
+                System.out.println(listOfCustomers.get(i).toString());
+                break;
+            }
+        }
+    }
+//        tim theo sdt co odder
+    public void searchHasOdder(String phoneNumber){
+        for (int i = 0; i < listOfCustomers.size(); i++) {
+            if (phoneNumber.equals(listOfCustomers.get(i).getPhoneNumber())) {
+                System.out.println(listOfCustomers.get(i).toString()+" tong don hang "+listOfCustomers.get(i).getTotalOder());
+            }
+        }
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void allDisplay(){
+        for (int i=0;i<listOfCustomers.size();i++){
+            System.out.println(listOfCustomers.get(i).toString());
+        }
+        System.out.println("Tong khach hang la "+listOfCustomers.size());
     }
 
-    public String getAddress() {
-        return address;
+    public void addOrder(String phoneNumber) {
+        for (int i = 0; i < listOfCustomers.size(); i++) {
+            if (phoneNumber.equals(listOfCustomers.get(i).getPhoneNumber())) {
+                listOfCustomers.get(i).setTotalOder(listOfCustomers.get(i).getTotalOder() + 1);
+                System.out.println(listOfCustomers.get(i).toString()+" tong don hang "+listOfCustomers.get(i).getTotalOder());
+            }
+        }
     }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public boolean isGender() {
-        return gender;
-    }
-
-    public void setGender(boolean gender) {
-        this.gender = gender;
-    }
-
-    public int getTotaloder() {
-        return totaloder;
-    }
-
-    public void setTotaloder(int totaloder) {
-        this.totaloder = totaloder;
-    }
-
-    public CustomerManagement inputCustomer(){
-        System.out.println("Nhập tên:");
-
+    public void exit(){
+        System.exit(0);
     }
 }
