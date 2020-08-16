@@ -63,6 +63,7 @@ public class Customer{
     public void setTotalOder(int totalOder) {
         this.totalOder = totalOder;
     }
+
     @Override
     public String toString(){
         return "Khach hang "+getName() +", Dia chi:"+getAddress()

@@ -1,14 +1,16 @@
 public class Card {
-    private long moneyInCard =50000;
+    private long moneyInCard = 50000;
     private String account_name;
-    private String[] history=new String[3];
+    private String[] histories = new String[3];
 
-    public String[] getHistory() {
-        return history;
+    public String[] getHistories() {
+        return histories;
     }
+
     public Card() {
     }
-    public Card( String account_name,long moneyInCard) {
+
+    public Card(String account_name, long moneyInCard) {
         this.moneyInCard = moneyInCard;
         this.account_name = account_name;
     }
@@ -21,24 +23,16 @@ public class Card {
         this.moneyInCard = moneyInCard;
     }
 
+
     public String getAccount_name() {
         return account_name;
     }
 
-    public String[] transactionHistory(String[] history, String newhistory){
-        if(history[history.length-1]!=null){
-            for (int i=0;i<history.length-1;i++){
-                history[i]=history[i+1];
-            }
-            history[history.length-1]=newhistory;
-        }else {
-            for (int i=0;i<history.length;i++){
-                if (history[i]==null){
-                    history[i]=newhistory;
-                    break;
-                }
-            }
+    public void transactionHistory(String newhistory) {
+        var length = histories.length;
+        for (int i = 0; i < length - 1; i++) {
+            histories[i] = histories[i + 1];
         }
-        return history;
+        histories[length - 1] = newhistory;
     }
 }

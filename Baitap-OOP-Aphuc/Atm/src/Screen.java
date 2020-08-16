@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class Screen {
+    public static final String VUI_LONG_NHAP_SO_TIEN = "Vui long nhap so tien:";
+    public static final String SO_DU_TAI_KHOAN_KHACH_HANG_LA = "So du tai khoan khach hang la: ";
     final double card_minimum_money=50000;
     public static  Card card =new Card("Nguyễn Văn Lâm",1200000);
     public static Atm atm=new Atm(card);
@@ -14,37 +16,44 @@ public class Screen {
         System.out.println("\t4.Nhan phim H de xem lich su 3 lan rut tien");
         System.out.println("\t5.Nhan phim X de thoat");
     }
+
     public static void getMoneySendToCard(){
         long moneySendToCard;
         System.out.println("Giao dich Nap tien");
-        System.out.println("Vui long nhap so tien:");
+        System.out.println(VUI_LONG_NHAP_SO_TIEN);
         moneySendToCard=check();
         atm.sendMoneyToCard(moneySendToCard);
+        var money = card.getMoneyInCard();
         System.out.println("Giao dich thanh cong. Ban vua nap "+moneySendToCard+"thanh cong\n"
-                +"So du tai khoan khach hang la: "+card.getMoneyInCard()+"vnd\n");
+                +SO_DU_TAI_KHOAN_KHACH_HANG_LA + money +"vnd\n");
     }
+
     public static void getWithdrawalCard(){
         long moneyWithdrawal;
         System.out.println("Giao dich Rut tien:");
-        System.out.println("Vui long nhap so tien:");
+        System.out.println(VUI_LONG_NHAP_SO_TIEN);
         moneyWithdrawal=check();
+        var money = card.getMoneyInCard();
         if(atm.withdrawal(moneyWithdrawal)){
             System.out.println("Giao dich thanh cong. Ban vua rut "+moneyWithdrawal+"thanh cong\n"
-                    +"So du tai khoan khach hang la: "+card.getMoneyInCard()+"vnd\n");
+                    + SO_DU_TAI_KHOAN_KHACH_HANG_LA + money +"vnd\n");
 
         }else System.out.println("Giao dich khong thanh cong.\n"
-                +"So du tai khoan khach hang la: "+card.getMoneyInCard()
+                +SO_DU_TAI_KHOAN_KHACH_HANG_LA + money
                 +"VND");
     }
 
-    public static void transactionHistoryTK(){
-        for (int i=2;i>=0;i--){
-            if (card.getHistory()[0]==null) {
-                System.out.println("chua co giao dich");
+    public static void updateHistoryTK(){
+        boolean check=false;
+        var histories = card.getHistories();
+        for (int i = histories.length-1; i>=0; i--){
+            if (histories[i]==null) {
+                check=true;
                 break;
-            }else if (card.getHistory()[i]==null){
-                continue;
-            }else System.out.println(card.getHistory()[i]);
+            }else System.out.println(histories[i]);
+        }
+        if (!check){
+            System.out.println("chua co giao dich");
         }
     }
     public static void main(String[] args) {
@@ -71,7 +80,7 @@ public class Screen {
                     break;
                 case "H":
                     count_error=0;
-                    Screen.transactionHistoryTK();
+                    Screen.updateHistoryTK();
                     break;
                 case "X":
                     atm.exit();

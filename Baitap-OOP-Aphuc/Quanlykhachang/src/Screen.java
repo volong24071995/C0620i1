@@ -3,10 +3,8 @@ import java.util.Scanner;
 
 public class Screen {
     static Scanner scanner=new Scanner(System.in);
-    private static String name,address,email,phoneNumber;
-    private static boolean gender;
-    private static int totalOder;
     private static CustomerManagement customerManagement=new CustomerManagement();
+
     public static void menu(){
         System.out.println("Menu");
         System.out.println("Bấm 1 để nhập khách hang");
@@ -17,30 +15,34 @@ public class Screen {
         System.out.println("Bam 0 để thoat");
     }
     public static void addNewCustomer(){
+        Customer customer=new Customer();
         System.out.println("Nhập tên:");
-        name = scanner.next();
+        customer.setName(scanner.nextLine());
         System.out.println("Nhập dia chi:");
-         address = scanner.next();
+        customer.setAddress(scanner.nextLine());
         System.out.println("Nhap email:");
-         email = scanner.next();
+        customer.setEmail(scanner.nextLine());
         System.out.println("Nhap sdt:");
-         phoneNumber = scanner.next();
+        customer.setPhoneNumber(scanner.nextLine());
         System.out.println("Nhap gioi tinh:");
-         gender = scanner.nextBoolean();
-        customerManagement.addCustomer(name,address,email,phoneNumber,gender,totalOder);
+        customer.setGender(Boolean.parseBoolean(scanner.nextLine()));
+        customerManagement.addCustomer(customer);
     }
 //    Search sdt ko co odder
     public static void searchCustomer(){
         System.out.println("Nhap sdt khach hang:");
-        phoneNumber = scanner.next();
+        String phoneNumber = scanner.nextLine();
         System.out.println("Hẹ thong dang tim kiem");
         System.out.println("Ket qua:");
-        customerManagement.search(phoneNumber);
+        if ( !customerManagement.checkPhone(phoneNumber)){
+            System.out.println("khong co khach hang");
+        }
+
     }
 //    Search sdt co odder
     public static void searchCustomerHasOder(){
     System.out.println("Nhap sdt khach hang:");
-    phoneNumber = scanner.next();
+    String phoneNumber = scanner.nextLine();
     customerManagement.searchHasOdder(phoneNumber);
 }
 
@@ -51,15 +53,16 @@ public class Screen {
 // them odder
     public static void addOdder(){
         System.out.println("Nhap sdt khach hang:");
-        phoneNumber = scanner.next();
+        String phoneNumber = scanner.nextLine();
         customerManagement.addOrder(phoneNumber);
     }
     public static void main(String[] args) {
         Screen.menu();
         String chose;
         while (true){
+            System.out.println();
             System.out.println("Lua chon:");
-            chose=scanner.next();
+            chose=scanner.nextLine();
             switch (chose) {
                 case "1":
                     Screen.addNewCustomer();
@@ -79,7 +82,7 @@ public class Screen {
                 case "0":
                     customerManagement.exit();
                 default:
-                    chose=scanner.next();
+                    chose=scanner.nextLine();
             }
         }
     }
