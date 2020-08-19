@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/DSAStackQueue.iml" filepath="$PROJECT_DIR$/.idea/DSAStackQueue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Stack/Linklist.iml" filepath="$PROJECT_DIR$/Stack/Linklist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Queue/Linklist-node.iml" filepath="$PROJECT_DIR$/Queue/Linklist-node.iml" />
+    </modules>
+  </component>
+</project>
