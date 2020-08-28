@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CoppyFileMax/CoppyFileMax.iml" filepath="$PROJECT_DIR$/CoppyFileMax/CoppyFileMax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/IOBinaryFile&amp;Serialization.iml" filepath="$PROJECT_DIR$/.idea/IOBinaryFile&amp;Serialization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QLKH/QLKH.iml" filepath="$PROJECT_DIR$/QLKH/QLKH.iml" />
+    </modules>
+  </component>
+</project>
