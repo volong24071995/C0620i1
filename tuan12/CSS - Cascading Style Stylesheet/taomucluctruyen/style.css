@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    text-decoration: underline red;
+}
+
+.header h1 {
+    color: red;
+    font-family: cursive;
+}
+
+.main {
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+}
+
+#introduce {
+    flex: 1;
+    display: block;
+}
+
+.infomation {
+    font-family: monospace;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+#description_content {
+    flex: 2.5;
+}
+
+#description_content div {
+    font-family: monospace;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+#description_content h2 {
+    font-family: cursive;
+}
+
+.list_of_contents {
+    display: block;
+    width: 90%;
+    margin-left: 5%;
+}
+
+a {
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 1.4em;
+    color: royalblue;
+}
+
+#list h2 {
+    font-family: cursive;
+}
