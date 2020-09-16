@@ -1,0 +1,37 @@
+.header {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    text-decoration: underline red;
+}
+
+.header h1 {
+    color: red;
+    font-family: cursive;
+}
+
+.row1,
+.row2 {
+    display: flex;
+    width: 100%;
+}
+
+.row1 div,
+.row2 div {
+    margin-left: 17%;
+    margin-top: 2%;
+    width: 8.1em;
+    height: auto;
+}
+
+img {
+    width: 100%;
+}
+
+h5 {
+    text-align: center;
+    line-height: 1.8em;
+    color: royalblue;
+    font-size: 1.2em;
+    font-family: monospace;
+}

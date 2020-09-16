@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display: flex;
+    flex:row;
+}
+
+.logo_search,.menu,.submenu{
+    flex: 1;
+}
+
+.menu ul,
+.submenu ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.menu ul li{
+    margin-left: 15%;
+}
+
+.submenu ul li{
+    justify-items: self-end;
+    margin-right: 5%;
+}
