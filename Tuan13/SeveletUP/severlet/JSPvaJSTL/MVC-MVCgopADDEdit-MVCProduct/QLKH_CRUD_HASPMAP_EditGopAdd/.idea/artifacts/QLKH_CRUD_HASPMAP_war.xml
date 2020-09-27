@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="QLKH_CRUD_HASPMAP:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>QLKH_CRUD_HASPMAP</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="QLKH_CRUD_HASPMAP-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="QLKH_CRUD_HASPMAP:war exploded" />
+    </root>
+  </artifact>
+</component>
