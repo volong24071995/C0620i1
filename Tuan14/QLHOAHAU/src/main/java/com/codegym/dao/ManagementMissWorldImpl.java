@@ -10,7 +10,7 @@ import java.util.Map;
 public class ManagementMissWorldImpl implements ManagementMissWorldDAO {
     private static Map<String,MissWorld> missWorldMap=new HashMap();
     static {
-        missWorldMap.put("192047789", new MissWorld("Vo Thi Mai Phuong","01/07/1996","Phu Bai","0971206095","maiphuong@gmail.com","192047789","Student","Cao Dang","Kinh","CDYT Hue", (float) 1.8, (float) 60.5,"Hat,mua","https://congthuong.vn/stores/news_dataimages/mn_ty/012020/20/13/x0447_IMG-8988.jpg.pagespeed.ic.NrISitU0AJ.jpg","Hue"));
+        missWorldMap.put("192047789", new MissWorld("Vo Thi Mai Phuong","1996-07-01","Phu Bai","0971206095","maiphuong@gmail.com","192047789","Student","Cao Dang","Kinh","CDYT Hue", (float) 1.8, (float) 60.5,"Hat,mua","https://congthuong.vn/stores/news_dataimages/mn_ty/012020/20/13/x0447_IMG-8988.jpg.pagespeed.ic.NrISitU0AJ.jpg","Hue"));
     }
 
 

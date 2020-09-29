@@ -51,7 +51,7 @@
             <tr>
                 <td> Ngày sinh: </td>
                 <td>
-                    <input name="birthday" type="text" value="${requestScope["missWorld"].getDob()}" required >
+                    <input name="birthday" type="date" value="${requestScope["missWorld"].getDob()}" required >
                 </td>
             </tr>
             <tr>
