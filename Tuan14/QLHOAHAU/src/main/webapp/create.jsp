@@ -33,7 +33,7 @@
 <form method="post">
     <fieldset>
         <legend>MissWorld information</legend>
-        <table>q
+        <table>
             <tr>
                 <td>Họ tên </td>
                 <td><input type="text" name="name" id="name" required></td>
