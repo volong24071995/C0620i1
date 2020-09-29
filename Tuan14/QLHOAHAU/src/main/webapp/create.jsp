@@ -33,68 +33,68 @@
 <form method="post">
     <fieldset>
         <legend>MissWorld information</legend>
-        <table>
+        <table>q
             <tr>
                 <td>Họ tên </td>
-                <td><input type="text" name="name" id="name"></td>
+                <td><input type="text" name="name" id="name" required></td>
             </tr>
             <tr>
                 <td> Ngày sinh: </td>
-                <td><input type="text" name="birthday" id="birthday"></td>
+                <td><input name="birthday" type="date"></td>
             </tr>
             <tr>
                 <td>Địa chỉ cư trú: </td>
-                <td><input type="text" name="address" id="address"></td>
+                <td><input type="text" name="address" id="address" required></td>
             </tr>
             <tr>
                 <td>Địa chỉ liên lạc: </td>
                 <td>
                     <p>Email</p>
-                    <input type="text" name="email" id="email" placeholder="email">
+                    <input type="text" name="email" id="email" placeholder="email" required>
                 </td>
                 <td>
                     <p>Phone</p>
-                    <input type="text" name="phone" id="phone" placeholder="Phone">
+                    <input type="text" name="phone" id="phone" placeholder="Phone" required>
                 </td>
             </tr>
             <tr>
                 <td>Số CMT/hộ chiếu </td>
-                <td><input type="text" name="cmnd" id="cmnd"></td>
+                <td><input type="text" name="cmnd" id="cmnd" required></td>
             </tr>
             <tr>
                 <td>Nghề nghiệp: </td>
-                <td><input type="text" name="job" id="job"></td>
+                <td><input type="text" name="job" id="job" required></td>
             </tr>
             <tr>
                 <td>Trình độ văn hóa: </td>
-                <td><input type="text" name="vanhoa" id="vanhoa"></td>
+                <td><input type="text" name="vanhoa" id="vanhoa" required></td>
             </tr>
             <tr>
                 <td>Dân tộc: </td>
-                <td><input type="text" name="dantoc" id="dantoc"></td>
+                <td><input type="text" name="dantoc" id="dantoc" required></td>
             </tr>
             <tr>
                 <td>Đơn vị công tác/học tập: </td>
-                <td><input type="text" name="donvicongtac" id="dv"></td>
+                <td><input type="text" name="donvicongtac" id="dv" required></td>
             </tr>
             <tr>
                 <td>Chiều cao, cân nặng: </td>
                 <td>
                     <p>Can nang</p>
-                    <input type="text" name="cannang" id="weight" placeholder="Can nang">
+                    <input type="text" name="cannang" id="weight" placeholder="Can nang" required>
                 </td>
                 <td>
                     <p>Chieu cao</p>
-                    <input type="text" name="chieucao" id="height" placeholder="Chieu cao">
+                    <input type="text" name="chieucao" id="height" placeholder="Chieu cao" required>
                 </td>
             </tr>
             <tr>
                 <td> Năng khiếu khác: </td>
-                <td><input type="text" name="nangkhieu" id="nangkhieu"></td>
+                <td><input type="text" name="nangkhieu" id="nangkhieu" required></td>
             </tr>
             <tr>
                 <td> Ảnh cá nhân.: </td>
-                <td><input type="text" name="img" id="img"></td>
+                <td><input type="text" name="img" id="img" required></td>
             </tr>
             <tr>
                 <td>

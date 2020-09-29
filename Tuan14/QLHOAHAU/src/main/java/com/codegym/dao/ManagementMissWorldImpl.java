@@ -39,10 +39,10 @@ public class ManagementMissWorldImpl implements ManagementMissWorldDAO {
         missWorldMap.remove(identityCard);
     }
 
-    public Boolean check(String cmnd, String email){
+    public boolean check(String cmnd, String email,String sdt){
         List<MissWorld> list=this.findAll();
         for (MissWorld missWorld:list){
-            if (missWorld.getIdentityCard().equals(cmnd)||missWorld.getEmail().equals(email)){
+            if (missWorld.getIdentityCard().equals(cmnd)||missWorld.getEmail().equals(email)||missWorld.getPhone().equals(sdt)){
                 return true;
             }
         }

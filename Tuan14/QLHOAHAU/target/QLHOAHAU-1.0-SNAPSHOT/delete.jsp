@@ -107,6 +107,10 @@
                 <td><input type="text" name="nangkhieu" id="nangkhieu" value="${requestScope["missWorld"].getGifted()}"></td>
             </tr>
             <tr>
+                <td> Năng khiếu khác: </td>
+                <td><input type="text" name="tinh" id="tinh" value="${requestScope["missWorld"].getTinh()}"></td>
+            </tr>
+            <tr>
                 <td></td>
                 <td><input type="submit" value="Delete MissWorld"></td>
             </tr>

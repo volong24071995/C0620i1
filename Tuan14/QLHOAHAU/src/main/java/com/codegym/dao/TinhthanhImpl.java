@@ -12,7 +12,7 @@ public class TinhthanhImpl implements TinhthanhDao {
     static {
         tinhthanhList=new HashMap<>();
         tinhthanhList.put(1,new Tinhthanh(1,"An Giang"));
-        tinhthanhList.put(2,new Tinhthanh(2,"Ba ria – Vung tau"));
+        tinhthanhList.put(2,new Tinhthanh(2,"Ba ria Vung tau"));
         tinhthanhList.put(3,new Tinhthanh(3,"Bac Giang"));
         tinhthanhList.put(4,new Tinhthanh(4,"Bac Kan"));
         tinhthanhList.put(5,new Tinhthanh(5,"Bac Lieu"));
@@ -78,7 +78,6 @@ public class TinhthanhImpl implements TinhthanhDao {
 
     @Override
     public List<Tinhthanh> findAll() {
-
         return new ArrayList<>(tinhthanhList.values()) ;
     }
 

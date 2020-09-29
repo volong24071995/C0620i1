@@ -18,7 +18,7 @@ import java.util.List;
 @WebServlet(name = "MissWorldServlet",urlPatterns = "/missWorlds")
 public class MissWorldServlet extends HttpServlet {
     private ManagementMissWorldImpl managementMissWorld = new ManagementMissWorldImpl();
-    private TinhthanhImpl tinhthanh=new TinhthanhImpl();
+    private final TinhthanhImpl tinhthanh=new TinhthanhImpl();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
@@ -73,9 +73,8 @@ public class MissWorldServlet extends HttpServlet {
     private void statusMissWorld(HttpServletRequest request, HttpServletResponse response){
         String id=request.getParameter("id");
         MissWorld missWorld=this.managementMissWorld.findById(id);
-        RequestDispatcher dispatcher;
         if(missWorld == null){
-            dispatcher = request.getRequestDispatcher("error-404.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("error-404.jsp");
         } else {
             if (missWorld.getStatus().equals("Yes")){
                 missWorld.setStatus("No");
@@ -202,7 +201,8 @@ public class MissWorldServlet extends HttpServlet {
         RequestDispatcher dispatcher;
         if(missWorld == null){
             dispatcher = request.getRequestDispatcher("error-404.jsp");
-        } else {
+        }else {
+//            if ((cmnd!=""&&!managementMissWorld.check(cmnd,""))||missWorld.getIdentityCard().equals(cmnd)){
             missWorld.setName(name);
             missWorld.setEmail(email);
             missWorld.setAddress(address);
@@ -217,13 +217,22 @@ public class MissWorldServlet extends HttpServlet {
             missWorld.setGifted(nangkhieu);
             missWorld.setImage(img);
             missWorld.setTinh(tinh);
+            missWorld.setPhone(phone);
             this.managementMissWorld.update(id, missWorld);
             request.setAttribute("missWorld", missWorld);
             request.setAttribute("message", "<script>\n" +
                     "        alert(\"MissWorld information was updated\")\n" +
                     "    </script>");
-            dispatcher = request.getRequestDispatcher("/edit.jsp");
+//            }else {
+//                request.setAttribute("missWorld", missWorld);
+//                request.setAttribute("message", "<script>\n" +
+//                        "        alert(\"MissWorld information was no updated\")\n" +
+//                        "    </script>");
+//            }
         }
+        dispatcher = request.getRequestDispatcher("/edit.jsp");
+        List<Tinhthanh> myList=tinhthanh.findAll();
+        request.setAttribute("myList",myList);
         try {
             dispatcher.forward(request, response);
         } catch (ServletException e) {
@@ -255,6 +264,7 @@ public class MissWorldServlet extends HttpServlet {
     }
 
     private void createMissWorld(HttpServletRequest request, HttpServletResponse response) {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/create.jsp");
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String address = request.getParameter("address");
@@ -270,20 +280,20 @@ public class MissWorldServlet extends HttpServlet {
         String nangkhieu=request.getParameter("nangkhieu");
         String img=request.getParameter("img");
         String tinh=request.getParameter("tinh");
+
         MissWorld missWorld = new MissWorld(name,birthday,address,phone,email,cmnd,job,vanhoa,dantoc,donvicongtac,chieucao,cannang,nangkhieu,img,tinh);
+        if (!managementMissWorld.check(cmnd,email,phone)){
+            this.managementMissWorld.save(missWorld);
+            request.setAttribute("message", "New missWorld was created");
+        }else {
+            request.setAttribute("message", "<script>\n" +
+                    "        alert(\"No create\")\n" +
+                    "    </script>");
+        }
+        List<Tinhthanh> myList=tinhthanh.findAll();
+        request.setAttribute("myList",myList);
         try {
-            if (!managementMissWorld.check(cmnd,email)){
-                this.managementMissWorld.save(missWorld);
-                request.setAttribute("message", "New missWorld was created");
-                RequestDispatcher dispatcher = request.getRequestDispatcher("/create.jsp");
-                dispatcher.forward(request, response);
-            }else {
-                request.setAttribute("message", "<script>\n" +
-                        "        alert(\"No create\")\n" +
-                        "    </script>");
-                RequestDispatcher dispatcher = request.getRequestDispatcher("/create.jsp");
-                dispatcher.forward(request, response);
-            }
+            dispatcher.forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
