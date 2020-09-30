@@ -169,7 +169,8 @@ public class UserDAO implements IUserDAO{
         }
         return userArrayList;
     }
-    public User searchUser(String name) {
+    public List<User> searchUser(String name) {
+        List<User> users=new ArrayList<>();
         User user = null;
         // Step 1: Establishing a Connection
         try (Connection connection = getConnection();
@@ -186,10 +187,11 @@ public class UserDAO implements IUserDAO{
                 String email = rs.getString("email");
                 String country = rs.getString("country");
                 user = new User(id, name, email, country);
+                users.add(user);
             }
         } catch (SQLException e) {
             printSQLException(e);
         }
-        return user;
+        return users;
     }
 }

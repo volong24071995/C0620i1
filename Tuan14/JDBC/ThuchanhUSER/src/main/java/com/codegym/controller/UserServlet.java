@@ -153,8 +153,8 @@ public class UserServlet extends HttpServlet {
     }
     public void search(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name=request.getParameter("name");
-        User user=userDAO.searchUser(name);
-        request.setAttribute("user",user);
+        List<User> listUsers=userDAO.searchUser(name);
+        request.setAttribute("listUsers",listUsers);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/view.jsp");
         dispatcher.forward(request, response);
     }

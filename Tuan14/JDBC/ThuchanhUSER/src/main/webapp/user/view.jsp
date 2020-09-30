@@ -39,6 +39,7 @@
             <th>Country</th>
             <th>Actions</th>
         </tr>
+        <c:forEach var="user" items="${listUsers}">
             <tr>
                 <td><c:out value="${user.id}"/></td>
                 <td><c:out value="${user.name}"/></td>
@@ -49,6 +50,7 @@
                     <a href="/users?action=delete&id=${user.id}">Delete</a>
                 </td>
             </tr>
+        </c:forEach>
     </table>
 </div>
 </body>
