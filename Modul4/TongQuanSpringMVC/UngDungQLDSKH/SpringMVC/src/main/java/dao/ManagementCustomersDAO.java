@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class ManagementCustomersDAO implements IManagementDAO<Customer>{
     private static Map<Integer,Customer> list=new HashMap<>();
-    private static int autoId=0;
+    private static int autoId=3;
     static {
         list.put(1,new Customer(1, "T", "t@codegym.vn", "Da Nang"));
         list.put(2,new Customer(2, "Nhat", "nhat@codegym.vn", "Quang Tri"));
@@ -24,7 +24,9 @@ public class ManagementCustomersDAO implements IManagementDAO<Customer>{
 
     @Override
     public void save(Customer customer) {
-        list.put(customer.getId(),customer);
+        autoId++;
+        customer.setId(autoId);
+        list.put(autoId,customer);
     }
 
     @Override

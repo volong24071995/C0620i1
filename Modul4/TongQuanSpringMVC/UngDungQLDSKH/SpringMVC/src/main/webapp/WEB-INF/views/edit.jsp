@@ -14,7 +14,7 @@
 </head>
 <body>
 <h2>Edit Customer</h2>
-<form action="/update" method="post">
+<form action="${action}" method="post">
     <table border="1">
         <input name="id" type="hidden" value="${customer.id}">
         <tr>

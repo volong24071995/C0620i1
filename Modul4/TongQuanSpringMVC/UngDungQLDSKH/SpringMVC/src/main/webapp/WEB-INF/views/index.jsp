@@ -14,6 +14,7 @@
 </head>
 <body>
 <h2>List Customer</h2>
+<h2><a href="/create">Create Customer</a></h2>
 <c:if test="${customers.size()>0}">
 <table border="1">
     <tr>
