@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gran_Demonstration:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Gran_Demonstration_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Gran_Demonstration/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Gran_Demonstration" />
+        </element>
+      </element>
+      <element id="artifact" artifact-name="Gradle : cg.wbd : Gran Demonstration-1.0-SNAPSHOT.war" />
+      <element id="artifact" artifact-name="Gradle : cg.wbd : Gran Demonstration-1.0-SNAPSHOT.war (exploded)" />
+    </root>
+  </artifact>
+</component>
