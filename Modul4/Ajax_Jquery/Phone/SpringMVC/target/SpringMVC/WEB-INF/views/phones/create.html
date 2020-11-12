@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create new Smartphone</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div id="container">
+    <h1>Create new Smartphone</h1>
+    <div>
+        <p>Here you can create new Smartphone:</p>
+        <div id="sPhoneFromResponse"></div>
+    </div>
+    <form id="newSmartphoneForm">
+        <table>
+            <tbody>
+            <tr>
+                <td>Producer:</td>
+                <td>
+                    <select id="producer">
+                        <option value="NOKIA">Nokia</option>
+                        <option selected="selected" value="IPHONE">iPhone</option>
+                        <option value="HTC">HTC</option>
+                        <option value="SAMSUNG">Samsung</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Model:</td>
+                <td><input id="model" /></td>
+            </tr>
+            <tr>
+                <td>Price:</td>
+                <td><input id="price" /></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Create" onclick="return phones.create()"/></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+    <a th:href="@{/smartPhones}">List</a>
+</div>
+</body>
+<script type="text/javascript">
+        var phones = phones || {};
+        phones.create = function () {
+            var phone ={};
+            phone.model = $('#model').val();
+            phone.producer = $('#producer').val();
+            phone.price = $('#price').val();
+            $.ajax({
+                url: "http://localhost:8080/api/smartPhones/create",
+                method: "POST",
+                dataType: 'json',
+                contentType: "application/json",
+                data: JSON.stringify(phone),
+                success: function (data) {
+                    alert("Product has been Created successfully");
+                }
+            })
+            return false;
+        }
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--    <script type="text/javascript">-->
+<!--        $(document).ready(function () {-->
+<!--            $('#editSmartphoneForm').submit(function (event) {-->
+<!--                var producer = $('#producer').val();-->
+<!--                var model = $('#model').val();-->
+<!--                var price = $('#price').val();-->
+<!--                var json = {"producer":producer, "model":model, "price":price};-->
+<!--                $.ajax({-->
+<!--                    url: $("#editSmartphoneForm").attr("action"),-->
+<!--                    data: JSON.stringify(json),-->
+<!--                    type: "PUT",-->
+
+<!--                    beforeSend: function (xhr) {-->
+<!--                        xhr.setRequestHeader("Accept", "application/json");-->
+<!--                        xhr.setRequestHeader("Content-Type", "application/json");-->
+<!--                    },-->
+<!--                    success: function (smartphone) {-->
+<!--                        var respContent = "";-->
+
+<!--                        respContent += "<span class='success'>Smartphone was edited: [";-->
+<!--                        respContent += smartphone.producer + " : ";-->
+<!--                        respContent += smartphone.model + " : ";-->
+<!--                        respContent += smartphone.price + "]</span>";-->
+<!--                        $("#sPhoneFromResponse").html(respContent);-->
+<!--                    }-->
+<!--                });-->
+<!--                event.preventDefault();-->
+<!--            });-->
+<!--        });-->
+<!--    </script>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--</body>-->
+<!--</html>-->

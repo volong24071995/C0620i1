@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>List Smartphone</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="container">
+    <h1>All Smartphones</h1>
+    <a th:href="@{/smartPhones/create}">Create</a>
+    <div>
+        <p>Here you can see a list of Smartphones:</p>
+    </div>
+    <table id="dataTable" class="table" border="1px" cellpadding="0" cellspacing="0">
+        <thead>
+        <tr>
+            <th>Producer</th>
+            <th>Model</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody id="sPhoneFromResponse">
+
+        </tbody>
+    </table>
+    <a th:href="@{/}">Home page</a>
+</div>
+
+<div>
+    <form id="newSmartphoneForm">
+        <table>
+            <tbody id="tableEdit">
+
+            </tbody>
+        </table>
+    </form>
+</div>
+
+</body>
+<script type="text/javascript">
+    var phones = phones || {};
+    phones.showAllPhones = function() {
+        $.ajax({
+            url: "http://localhost:8080/api/smartPhones/",
+            method: "GET",
+            dataType: "json",
+            success: function (data) {
+                $('#sPhoneFromResponse').empty();
+                $.each(data, function (i, v) {
+                    $('#sPhoneFromResponse').append(
+                        "<tr>" +
+                        "<td>" + v.producer + "</td>" +
+                        "<td>" + v.model + "</td>" +
+                        "<td>" + v.price + "</td>" +
+                        "<td>" +
+                        "<a class='ml-3' href='#' onclick='phones.getPhoneById("+v.id+")'>Edit</a>" +
+                        "<a class='ml-3' href='#' onclick='phones.remove("+v.id+")'>Delete</a>" +
+                        "</td>" +
+                        "</tr>"
+                    );
+                });
+                $('#dataTable').DataTable();
+            }
+        });
+    };
+
+    phones.remove = function(id){
+        $.ajax({
+            url : "http://localhost:8080/api/smartPhones/" + id,
+            method : "DELETE",
+            dataType:'json',
+            success : function(data){
+                phones.showAllPhones();
+                alert("Product has been deleted successfully");
+            }
+        });
+
+    }
+
+    phones.getPhoneById = function(id){
+        $.ajax({
+            url : "http://localhost:8080/api/smartPhones/" + id,
+            method : "GET", //"POST"
+            dataType:'json',
+            success : function(data){
+                $('#tableEdit').append(
+                    "<tr>"+
+                        "<input type='hidden' id='id' >"+
+                            "<td>Producer:</td>"+
+                            "<td>"+
+                                "<select id='producer'>"+
+                                    "<option value='NOKIA'>Nokia</option>"+
+                                    "<option selected='selected' value='IPHONE'>iPhone</option>"+
+                                    "<option value='HTC'>HTC</option>"+
+                                    "<option value='SAMSUNG'>Samsung</option>"+
+                                "</select>"+
+                            "</td>"+
+                    "</tr>"+
+                "<tr>"+
+                    "<td>Model:</td>"+
+                    "<td><input id='model' /></td>"+
+                "</tr>"+
+                "<tr>"+
+                    "<td>Price:</td>"+
+                   " <td><input id='price' /></td>"+
+                "</tr>"+
+                "<tr>"+
+                    "<td><input type='submit' value='Update' onclick=' return phones.update()'/></td>"+
+                   " <td></td>"+
+                "</tr>"
+                );
+
+                $('#producer').val(data.producer);
+                $('#model').val(data.model);
+                $('#price').val(data.price);
+                $('#id').val(data.id);
+            }
+        });
+    }
+
+    phones.update=function (){
+        var phone={};
+        phone.model=$('#model').val();
+        phone.producer=$('#producer').val();
+        phone.price=$('#price').val();
+        phone.id=$('#id').val();
+        $.ajax({
+            url : "http://localhost:8080/api/smartPhones/",
+            method : "PUT",
+            dataType:'json',
+            contentType:"application/json",
+            data : JSON.stringify(phone),
+            success : function(data){
+                $('#tableEdit').html("");
+                alert("ok");
+                phones.showAllPhones();
+            }
+        });
+        return false;
+    }
+
+    $(document).ready(function(){
+        phones.showAllPhones();
+    });
+
+</script>
+</html>
+
