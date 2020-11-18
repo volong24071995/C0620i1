@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>
+    Welcome !
+    <!-- Print the logged in user name -->
+    <div sec:authorize="isAuthenticated()">
+        <span sec:authentication="principal.username"></span>
+    </div>
+</h3>
+<div sec:authorize="isAuthenticated()">
+    <a th:href="@{/blogs}">Back list</a>
+    <a th:href="@{/logout}">Logout</a>
+</div>
+</body>
+</html>
