@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show blog list</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+<h1>Blog list</h1>
+<form>
+    Search by first name:
+    <input id="str" type="text" />
+    <input type="button" value="Search" onclick="return blogs.findBlogsByName()"/>
+</form><br/>
+<p>
+    <a href="/create-blog">Create new blog</a>
+</p>
+<table border="1" id="dataTable">
+    <thead>
+    <tr>
+        <td>Name</td>
+        <td>Content</td>
+        <td>Image link</td>
+        <td>Category</td>
+        <td>Action</td>
+    </tr>
+    </thead>
+    <tbody id="showListBlog">
+
+    </tbody>
+</table>
+<form>
+    <table id="tableEdit">
+
+    </table>
+</form>
+<div id="backlist">
+
+</div>
+<div id="andi" style="display: none">
+    Cach dung display in ajax;
+</div>
+
+</body>
+
+<script type="text/javascript">
+    var blogs = blogs || {};
+    blogs.showAllBlogs = function() {
+        $.ajax({
+            url: "http://localhost:8080/api/blogs/",
+            method: "GET",
+            dataType: "json",
+            success: function (data) {
+                console.log(data)
+                $('#showListBlog').empty();
+                $.each(data.content, function (i, v) {
+                    $('#showListBlog').append(
+                        "<tr>" +
+                        "<td>" + v.name + "</td>" +
+                        "<td>" + v.content + "</td>" +
+                        "<td>" + v.image + "</td>" +
+                        "<td>" + v.category.name + "</td>" +
+                        "<td>" +
+                        "<a class='ml-3' href='#' onclick='blogs.getBlogById("+v.id+")'>Edit</a>" +
+                        "<a class='ml-3' href='#' onclick='return blogs.remove("+v.id+")'>Delete</a>" +
+                        "</td>" +
+                        "</tr>"
+                    );
+                });
+            }
+        });
+    };
+
+    blogs.remove = function(id){
+        $.ajax({
+            url : "http://localhost:8080/api/blogs/" + id,
+            method : "DELETE",
+            dataType:'json',
+            success : function(data){
+                blogs.showAllBlogs();
+                alert("Blog has been deleted successfully");
+            }
+        });
+    }
+    var categoriId = 0;
+    blogs.getBlogById = function(id){
+        $.ajax({
+            url : "http://localhost:8080/api/blogs/" + id,
+            method : "GET", //"POST"
+            dataType:'json',
+            success : function(data){
+                console.log(data);
+                $('#tableEdit').empty();
+                $('#tableEdit').append(" ");
+                $('#tableEdit').append(
+                    "<tr>"+
+                        "<input type='hidden' id='id' />"+
+                        "<td>Name:</td>"+
+                        "<td><input id='name'></td>"+
++                  "  </tr>"+
+              "<tr>"+
+                    "<td>Content:</td>"+
+                    "<td><input  id='content'></td>"+
+                "</tr>"+
+                "<tr>"+
+                    "<td>Image:</td>"+
+                    "<td><input  id='image'></td>"+
+               " </tr>"+
+                "<tr>"+
+                    "<td>Category:</td>"+
+                    "<td>"+
+                        "<select id='category' >"+
+
+                        "</select>"+
+                    "</td>"+
+                "</tr>"+
+                "<tr>"+
+                    "<td></td>"+
+                    "<td><input type='submit' value='Update blog' onclick='return blogs.update()'></td>"+
+                "</tr>"
+                );
+                $('#name').val(data.name);
+                $('#content').val(data.content);
+                $('#image').val(data.image);
+                $('#id').val(data.id);
+                category.lisCategories(data);
+                categoriId = data.category.id
+                $("#andi").css("display", "block");
+            }
+        });
+    }
+
+    var categoryData =[];
+    var category=category||{};
+    category.lisCategories=function (e){
+        $.ajax({
+            url: "http://localhost:8080/api/categories/",
+            method: "GET",
+            dataType: "json",
+            success: function (data) {
+                categoryData = data.content;
+                $.each(data.content, function (i, v) {
+                        $('#category').append(
+                            "<option value='"+v.id+"'>" + v.name+ "</option>"
+                        );
+
+                });
+                $('#category').val(categoriId);
+            }
+        });
+    }
+    category.findById = function (id){
+        console.log(id);
+        for (let i =0; i<categoryData.length; i++){
+            if(id===categoryData[i].id){
+                return categoryData[i];
+            }
+
+        }
+        return null;
+    }
+
+
+    blogs.update=function (){
+        var blog={};
+        blog.name=$('#name').val();
+        blog.content=$('#content').val();
+        blog.image=$('#image').val();
+        blog.category=category.findById(parseInt($('#category').val()));
+        blog.id=$('#id').val();
+        $.ajax({
+            url : "http://localhost:8080/api/blogs/",
+            method : "PUT",
+            dataType:'json',
+            contentType:"application/json",
+            data : JSON.stringify(blog),
+            success : function(data){
+                $('#tableEdit').html("");
+                $("#andi").css("display", "none");
+                alert("ok");
+                blogs.showAllBlogs();
+            }
+        });
+        return false;
+    }
+
+    blogs.findBlogsByName=function (){
+        var str=$('#str').val()
+        if (str===null){
+            blogs.showAllBlogs();
+        }else {
+            $.ajax({
+                url: "/api/blogs/search?name="+str,
+                method: "GET",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data.content==null)
+                        $('#showListBlog').empty();
+                        $.each(data.content, function (i, v) {
+                            $('#showListBlog').append(
+                                "<tr>" +
+                                "<td>" + v.name + "</td>" +
+                                "<td>" + v.content + "</td>" +
+                                "<td>" + v.image + "</td>" +
+                                "<td>" + v.category.name + "</td>" +
+                                "<td>" +
+                                "<a class='ml-3' href='#' onclick='blogs.getBlogById("+v.id+")'>Edit</a>" +
+                                "<a class='ml-3' href='#' onclick='return blogs.remove("+v.id+")'>Delete</a>" +
+                                "</td>" +
+                                "</tr>"
+                            );
+                        });
+                        return false;
+                    }
+            });
+        }
+    }
+
+    $(document).ready(function(){
+        blogs.showAllBlogs();
+    });
+
+</script>
+</html>
